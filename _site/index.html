@@ -37,7 +37,7 @@
   	this.content.$t.split(", ").forEach(function(el) {
   		text = (el.split(": "))[1];
   		lang = (el.split(": "))[0];
-    	s += '<td> <a href="#" class="say">' + text + '</a><audio class="speech" rel="noreferrer" hidden></audio></td>';
+    	s += '<td> <a href="#" class="say">' + text + '<audio class="speech" rel="noreferrer" hidden></audio></a></td>';
     });
 
   	$( ".translations" ).append( "<tr>" + s + "</tr>" );
@@ -50,18 +50,19 @@
 
  // $(function(){
   $('a.say').on('click', function(e){
-    
+    console.log("clicked");
   })
  // });
 
   document.addEventListener('click', function (e) {
     if (hasClass(e.target, 'say')) {
         e.preventDefault();
+        var targetElement = e.target || event.srcElement;
         var lang = "en";
-        var text = encodeURIComponent($(this).find('a:first').text());
+        var text = encodeURIComponent($(targetElement).text());
         var url = "http://translate.google.com.vn/translate_tts?tl="+lang+"&q="+text+"&client=tw-ob";
         console.log(url);
-        $(this).find('audio:first').attr('src', url).get(0).play();
+        $(targetElement).find("audio:first").attr('src', url).get(0).play();
     } else if (hasClass(e.target, 'test')) {
         // .test clicked
         // Do your other thing
