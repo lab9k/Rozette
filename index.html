@@ -34,7 +34,7 @@ title: Service Factory
   	this.content.$t.split(", ").forEach(function(el) {
   		text = (el.split(": "))[1];
   		lang = (el.split(": "))[0];
-    	s += '<td> <a href="#" class="say">' + text + '</a><audio src="" class="speech" rel="noreferrer" hidden></audio></td>';
+    	s += '<td> <a href="#" class="say">' + text + '</a><audio class="speech" rel="noreferrer" hidden></audio></td>';
     });
 
   	$( ".translations" ).append( "<tr>" + s + "</tr>" );
@@ -56,7 +56,7 @@ title: Service Factory
         e.preventDefault();
         var lang = "en";
         var text = encodeURIComponent($(this).find('a:first').text());
-        var url = "http://translate.google.com.vn/translate_tts?tl="+lang+"&q="+text+"&client=tw-ob﻿";
+        var url = "http://translate.google.com/translate_tts?tl="+lang+"&q="+text+"&client=t";
         console.log(url);
         $(this).find('audio:first').attr('src', url).get(0).play();
     } else if (hasClass(e.target, 'test')) {
