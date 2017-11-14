@@ -7,13 +7,16 @@
 </head>
 
 <body>
-	 <table class="translations" style="width:100%"><tr class="translationshead"></tr></table> 
+	 <table class="translations" style="width:100%"><tr class="translationshead"></tr></table>
+<script src="http://code.responsivevoice.org/responsivevoice.js"></script>
 <script>
 	// ID of the Google Spreadsheet
  var spreadsheetID = "1gsdlh7rZmZeC2rYBS16b3g1Z5kJ1AkiZRT9_sTJgBz4";
 
  // Make sure it is public or set to Anyone with link can view 
  var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
+
+ var voices = new Map();
 
  $.getJSON(url, function(data) {
 
@@ -30,23 +33,30 @@
   });
 
   $(entry).each(function(index, element){
-  	console.log(this);
+    if(voices.size == 0){
+      this.content.$t.split(", ").forEach(function(el) {
+        voices.set((el.split(": "))[0] ,(el.split(": "))[1]);
+      });
+    }
+    else{
+      var s = "<td>" + this.title.$t + "</td>";
 
-  	var s = "<td>" + this.title.$t + "</td>";
+      this.content.$t.split(", ").forEach(function(el) {
+        text = (el.split(": "))[1];
+        s += '<td> <a href="#" class="say" lang="'+(el.split(": "))[0]+'">' + text + '<audio class= rel="noreferrer" hidden></audio></a></td>';
+      });
 
-  	this.content.$t.split(", ").forEach(function(el) {
-  		text = (el.split(": "))[1];
-  		lang = (el.split(": "))[0];
-    	s += '<td> <a href="#" class="say">' + text + '<audio class="speech" rel="noreferrer" hidden></audio></a></td>';
-    });
-
-  	$( ".translations" ).append( "<tr>" + s + "</tr>" );
-  	// console.log(this.title.$t);
-  	// console.log(this.content.$t);
-
+      $( ".translations" ).append( "<tr>" + s + "</tr>" );
+      // console.log(this.title.$t);
+      // console.log(this.content.$t);
+    }
   });
-
  });
+
+  // var voicelist = responsiveVoice.getVoices();
+  // voicelist.forEach(function(voice){
+  //   console.log('case "en": row[i] = "'+voice.name+'"; break;');
+  // })
 
  // $(function(){
   $('a.say').on('click', function(e){
@@ -54,15 +64,42 @@
   })
  // });
 
+
   document.addEventListener('click', function (e) {
     if (hasClass(e.target, 'say')) {
         e.preventDefault();
         var targetElement = e.target || event.srcElement;
-        var lang = "en";
-        var text = encodeURIComponent($(targetElement).text());
-        var url = "http://translate.google.com.vn/translate_tts?tl="+lang+"&q="+text+"&client=tw-ob";
-        console.log(url);
-        $(targetElement).find("audio:first").attr('src', url).get(0).play();
+        var voice = $(targetElement).attr('lang');
+        var text = $(targetElement).text();
+        responsiveVoice.speak(text, voices.get(voice));
+        // var text = encodeURIComponent($(targetElement).text());
+        // var url = "http://translate.google.com/translate_tts?tl="+lang+"&q="+text+"&client=t";
+        // console.log(url);
+        // var referrer = "http://translate.google.com/";
+        // $.ajax({
+        //   type: 'GET',
+        //   url: url,
+        //   xhrFields: {
+        //     withCredentials: false
+        //   },
+        //   headers: {
+        //     'X-Alt-Referer': referrer, 
+        //     'Access-Control-Allow-Origin': '*',
+        //     'Access-Control-Allow-Origin': 'http://translate.google.com/',
+        //     'Access-Control-Allow-Methods': "GET, OPTIONS",
+        //     'Access-Control-Allow-Headers': "Authorization, X-Requested-With, Content-Type, Origin, Accept",
+        //     'Access-Control-Allow-Credentials': "true"
+        //   },
+        //   success: function(data) {
+        //     var audioElement = $(targetElement).find("audio:first");
+        //     audioElement.attr('src', data);
+        //     audioElement.get(0).load();
+        //     audioElement.get(0).play();
+        //   },
+        //   error: function() {
+        //   }
+        // });
+        // $(targetElement).find("audio:first").attr('src', url).get(0).play();
     } else if (hasClass(e.target, 'test')) {
         // .test clicked
         // Do your other thing
