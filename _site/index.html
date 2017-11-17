@@ -4,13 +4,38 @@
 	<meta charset="UTF-8">
 	<title>Text To Speech</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-  <h1> Rozette </h1>
-	<table id="translations" class="translations" style="width:100%"><tr class="translationshead"></tr></table>
+  <div class="container">
+    <h1> Rozette </h1>
+  	<table id="translations" class="translations" style="width:100%"><tr class="translationshead follow-scroll"></tr></table>
+  </div>
 <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+<script>
+  (function($) {
+    var element = $('.follow-scroll'),
+        originalY = element.offset().top;
+
+    // Space between element and top of screen (when scrolling)
+    var topMargin = 20;
+
+    // Should probably be set in CSS; but here just for emphasis
+    element.css('position', 'relative');
+
+    $(window).on('scroll', function(event) {
+        var scrollTop = $(window).scrollTop();
+
+        element.stop(false, false).animate({
+            top: scrollTop < originalY
+                    ? 0
+                    : scrollTop - originalY + topMargin
+        }, 300);
+    });
+})(jQuery);
+</script>
 <script>
 	// ID of the Google Spreadsheet
  var spreadsheetID = "1gsdlh7rZmZeC2rYBS16b3g1Z5kJ1AkiZRT9_sTJgBz4";
@@ -24,20 +49,13 @@
 
   var entry = data.feed.entry;
 
-  var langs = $(entry)[0].content.$t.split(", ");
-
-  langs = langs.map(lang => (lang.split(":"))[0]);
-
-  $( ".translationshead" ).append( "<th>nl</th>"); 
-
-  langs.forEach(function(lang) {
-     $( ".translationshead" ).append( "<th>"+lang+"</th>");
-  });
+  $( ".translationshead" ).append( "<th>Nederlands</th>"); 
 
   $(entry).each(function(index, element){
     if(voices.size == 0){
       this.content.$t.split(", ").forEach(function(el) {
         voices.set((el.split(": "))[0] ,(el.split(": "))[1]);
+        $( ".translationshead" ).append( "<th>"+(el.split(": "))[1]+"</th>");
       });
     }
     else{
@@ -45,7 +63,7 @@
 
       this.content.$t.split(", ").forEach(function(el) {
         text = (el.split(": "))[1];
-        s += '<td> <a href="#" class="say" lang="'+(el.split(": "))[0]+'">' + text + '<audio class= rel="noreferrer" hidden></audio></a></td>';
+        s += '<td> <a href="#"><i class="say fa fa-play-circle-o" style="font-size:48px;color:blue" lang="'+(el.split(": "))[0]+'" data-text="'+text+'"></i><audio class= rel="noreferrer" hidden></audio></a></td>';
       });
 
       $( ".translations" ).append( "<tr>" + s + "</tr>" );
@@ -61,9 +79,9 @@
   // })
 
  // $(function(){
-  $('a.say').on('click', function(e){
-    console.log("clicked");
-  })
+  // $('a.say').on('click', function(e){
+  //   console.log("clicked");
+  // })
  // });
 
 
@@ -71,9 +89,13 @@
     if (hasClass(e.target, 'say')) {
         e.preventDefault();
         var targetElement = e.target || event.srcElement;
+        $(targetElement).toggleClass("fa-play-circle-o fa-play-circle");
         var voice = $(targetElement).attr('lang');
-        var text = $(targetElement).text();
-        responsiveVoice.speak(text, voices.get(voice));
+        var text = $(targetElement).attr('data-text');
+        responsiveVoice.speak(text, voices.get(voice), {onend: function(){
+          $(targetElement).toggleClass("fa-play-circle fa-play-circle-o");
+        }});
+
         // var text = encodeURIComponent($(targetElement).text());
         // var url = "http://translate.google.com/translate_tts?tl="+lang+"&q="+text+"&client=t";
         // console.log(url);
