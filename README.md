@@ -1,6 +1,9 @@
 # Rozette : translate-to-speech
 
-"Ode aan Rozette" 
+
+![Rosetta Stone](https://i.imgur.com/aF9fi1I.png)
+
+
 Dit project voorziet een functionaliteit van translate to speech.  
 
 ## How it works
