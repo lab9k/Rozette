@@ -15,18 +15,18 @@ Om te beginnen vertrekken we vanuit een template.
 Open de [Google Spreadsheet template](https://docs.google.com/spreadsheets/d/1gsdlh7rZmZeC2rYBS16b3g1Z5kJ1AkiZRT9_sTJgBz4/edit#gid=0)
 
 Klik op "bestand", vervolgens op "kopie maken..."
-Nu kan je de naam aanpassen. Klik daarna op "OK"
-Vervolgens wordt de aangemaakt spreadsheet automatisch geopend.
+Nu kan je de naam aanpassen. Klik daarna op "OK".
+Vervolgens wordt de spreadsheet aangemaakt en geopend.
 
 ### Stap 2: Link de Google spreadsheet aan Rozette
 
-haal de sleutel van deze spreadsheet uit de url, bv. :
-GOOGLESPREADSHEEDID = 1gsdlh7rZmZeC2rYBS16b3g1Z5kJ1AkiZRT9_sTJgBz4
+haal de GOOGLESPREADSHEEDID van deze spreadsheet uit de url, bv. :
+1gsdlh7rZmZeC2rYBS16b3g1Z5kJ1AkiZRT9_sTJgBz4
 
 ### Stap 3: Vul je Google spreadsheet in
 
 Als end-user vul je in de linker kolom de tekst in in het nederlands die vertaalt moet worden:
-[Google spreadsheet](https://docs.google.com/spreadsheets/d/GOOGLESPREADSHEEDID/edit?ts=5a0975fd#gid=0)
+[Google spreadsheet](https://docs.google.com/spreadsheets/d/1gsdlh7rZmZeC2rYBS16b3g1Z5kJ1AkiZRT9_sTJgBz4/edit#gid=0)
 
 | Translating status | en | fr | de | tr | pl |
 |----------|:-------------:|:------:| :------:|:------:|:------:|
@@ -36,7 +36,7 @@ Als end-user vul je in de linker kolom de tekst in in het nederlands die vertaal
 ### Stap 4: Translate
 
 Vervolgens zal het script de tekst in alle opgeven talen vertalen(en,fr,de,tr & pl).
-Daarna wordt de google spreadsheet vertaald in JSON formaat en aangeboden op volgende [link](https://spreadsheets.google.com/feeds/list/GOOGLESPREADSHEEDID/od6/public/values?alt=json)
+Daarna wordt de google spreadsheet vertaald in JSON formaat. bv. : en aangeboden op volgende [link](https://spreadsheets.google.com/feeds/list/1gsdlh7rZmZeC2rYBS16b3g1Z5kJ1AkiZRT9_sTJgBz4/od6/public/values?alt=json)
 
 ### Stap 5: Speech
 
