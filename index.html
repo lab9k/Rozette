@@ -74,7 +74,7 @@
           //console.log(this.content.$t.split(", "));
           this.content.$t.split(", ").forEach(function(el) {
             text = (el.split(": "))[1];
-            s += '<td data-title="UK English Female"> <a href="#"><i class="say fa fa-play-circle" style="font-size:48px;color:black" lang="'+(el.split(": "))[0]+'" data-text="'+text+'" ></i><audio class= rel="noreferrer" hidden></audio></a></td>';
+            s += '<td data-title="'+voices.get((el.split(": "))[0])+'"> <a href="#"><i class="say fa fa-play-circle" style="font-size:48px;color:black" lang="'+(el.split(": "))[0]+'" data-text="'+text+'" ></i><audio class= rel="noreferrer" hidden></audio></a></td>';
           });
     
           $( ".translations" ).append( "<tr>" + s + "</tr>" );
