@@ -10,9 +10,22 @@
 
 <body>
   <div class="container">
-    <h1> Rozette </h1>
-  	<table id="translations" class="translations" style="width:100%"><tr class="translationshead follow-scroll"></tr></table>
+        <h1> Rozette </h1>
+
+    <div class="table-responsive-vertical shadow-z-1">
+
+      <table id="translations" class="translations table table-hover table-mc-light-grey table-bordered" style="width:100%">
+        <thead>
+          <tr class="translationshead follow-scroll">
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+    </div>
   </div>
+
 <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
 <script>
   (function($) {
@@ -53,17 +66,20 @@
 
   $(entry).each(function(index, element){
     if(voices.size == 0){
+      console.log(this.content.$t.split(", "));
+
       this.content.$t.split(", ").forEach(function(el) {
         voices.set((el.split(": "))[0] ,(el.split(": "))[1]);
         $( ".translationshead" ).append( "<th>"+(el.split(": "))[1]+"</th>");
+        //console.log((el.split(": "))[1]);
       });
     }
     else{
       var s = "<td>" + this.title.$t + "</td>";
-
+      //console.log(this.content.$t.split(", "));
       this.content.$t.split(", ").forEach(function(el) {
         text = (el.split(": "))[1];
-        s += '<td> <a href="#"><i class="say fa fa-play-circle-o" style="font-size:48px;color:blue" lang="'+(el.split(": "))[0]+'" data-text="'+text+'"></i><audio class= rel="noreferrer" hidden></audio></a></td>';
+        s += '<td data-title="UK English Female"> <a href="#"><i class="say fa fa-play-circle" style="font-size:48px;color:black" lang="'+(el.split(": "))[0]+'" data-text="'+text+'" ></i><audio class= rel="noreferrer" hidden></audio></a></td>';
       });
 
       $( ".translations" ).append( "<tr>" + s + "</tr>" );
