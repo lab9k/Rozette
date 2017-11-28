@@ -1,9 +1,10 @@
-/* #translations {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+#translations {
     border-collapse: collapse;
     width: 100%;
     table-layout: fixed;
 }
+
+
 
 #translations td, #translations th {
     border: 1px solid #ddd;
@@ -13,7 +14,11 @@
 
 #translations tr:nth-child(even){background-color: #f2f2f2;}
 
-#translations tr:hover {background-color: #ddd;}
+#translations tr:hover {background-color: #ddd;
+
+}
+
+/* 
 
 #translations th {
     padding-top: 12px;
@@ -623,5 +628,15 @@ body {
   .table-responsive-vertical .table-hover.table-mc-deep-orange > tbody > tr > td:hover {
     background-color: #ffccbc;
   }
+  tbody > tr > td:first-child {
+    font-weight: bold;
+    
+    background-color: #c1c1c1 !important;
+  }
+
+
+
 }
+
+
 
