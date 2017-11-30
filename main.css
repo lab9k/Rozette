@@ -638,5 +638,41 @@ body {
 
 }
 
+.languages a{
+  margin-right:5px;
+}
 
-
+form#translateform {
+  margin: 0 auto;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+form#translateform input,
+form#translateform select {
+  height: 40px;
+  color: #006495;
+  padding: 0 15px;
+  margin-bottom: 20px;
+  width: 100%;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+}
+form#translateform textarea {
+  color: #006495;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+}
+form#translateform button[type="submit"] {
+  height: 50px;
+  background-color: #006495;
+  color: white;
+  margin-top: -50px;
+  width: 50px;
+  margin-left: calc(100% - 30px);
+  border-radius: 50%;
+}
+form#translateform button[type="submit"]:hover {
+  transition: all 358ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  background-color: #004669;
+}
