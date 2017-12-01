@@ -2,18 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Text To Speech</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rozette</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
 </head>
 
 <body>
-    <form name="getSheet">
-        Google spreadsheet url:<br>
-        <input id="sheetUrl" type="text" name="sheet"><br>
-        <input type="button" value="Go" onclick="redirect()">
-    </form>
+    <div class="container">
+        <h1> How to Rozette</h1>
+        <p> Bla bla uitleg </p>
+        <iframe width="420" height="315"
+        src="https://www.youtube.com/embed/DOtkNxmg9QY">
+        </iframe>     
+        <h2> Voeg google spreadsheet toe: </h2>
+        <form name="getSheet">
+            Spreadsheet url:
+            <input id="sheetUrl" type="text" name="sheet">
+            <input type="button" value="Maak Rozette pagina" onclick="redirect()">
+        </form>
+    </div>
 </body>
 
 <script>
