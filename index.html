@@ -94,7 +94,7 @@
                                     </div>
                                     <div class="col-md-8 col-sm-7 col-xs-6">
                                          <div id="searchfield" class="input-group stylish-input-group">
-                                            <input type="text" class="form-control"  placeholder="Search" >
+                                            <input id="search" type="text" class="form-control"  placeholder="Search" >
                                             <span class="input-group-addon">
                                                 <button type="submit">
                                                     <span class="fa fa-search"></span>
@@ -211,12 +211,11 @@
           var title = this.title.$t.replace(/[^ -~]+/g, "").replace(/(\r\n|\n|\r)/gm,"").trim();
           var s = '<div class="song amplitude-song-container amplitude-play-pause">';
           s+='<div class="song-meta-data">';
-          s+='<span class="song-title"><a class="say" href=#'+(i++)+' data-say="'+title+'">'+title+'</a></span>';
+          s+='<span class="song-title"><a class="say-text say" href=#'+(i++)+' data-say="'+title+'">'+title+'</a></span>';
           s+='</div>';
           s+='<div class="play-now">';
           s+='<a class="btn btn-sm btn-black say" data-say="'+title+'"><span class="normal-state" >Play</span><span class="play-state">Pause</span></a>';
           s+='</div>';
-          console.log(s);
           translations[title] = {};
           //console.log(this.content.$t.split(", "));
           this.content.$t.split(", ").forEach(function(el) {
@@ -237,15 +236,15 @@
   }
 
   window.onload = function(e){
-    var $rows = $('#translations').find('tr');
+    var $rows = $('#translations').find('.song');
       $('#search').keyup(function() {
-        $rows = $('#translations').find('tr');
+        $rows = $('#translations').find('.song');
         var val = '^(?=.*\\b' + $.trim($(this).val()).split(/\s+/).join('\\b)(?=.*\\b') + ').*$',
             reg = RegExp(val, 'i'),
             text;
 
         $rows.show().filter(function() {
-            text = $(this).text().replace(/\s+/g, ' ');
+            text = $(this).find(".song-meta-data").text().replace(/\s+/g, ' ');
             return !reg.test(text);
         }).hide();
       });
