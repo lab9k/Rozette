@@ -21,13 +21,13 @@
 
     <div class="row">
       <div class="col-md-8">
-          <div class="table-responsive-vertical shadow-z-1">
-              <table id="translations" class="translations table table-hover table-mc-light-grey table-bordered" style="width:100%">
-                <tbody>
-      
-                </tbody>
-              </table>
-            </div>
+        <form>
+          <input type="text" id="search" name="search" placeholder="Zoek">
+        </form>
+        <div class="table-responsive-vertical shadow-z-1">
+          <table id="translations" class="translations table table-hover table-mc-light-grey table-bordered" style="width:100%">
+          </table>
+        </div>
       </div>
       <div class="col-md-4">
         <div class="affix">
@@ -107,6 +107,21 @@
       console.log("Loading spreadsheet failed.");
     });
 
+  }
+
+  window.onload = function(e){
+    var $rows = $('#translations').find('tr');
+      $('#search').keyup(function() {
+        $rows = $('#translations').find('tr');
+        var val = '^(?=.*\\b' + $.trim($(this).val()).split(/\s+/).join('\\b)(?=.*\\b') + ').*$',
+            reg = RegExp(val, 'i'),
+            text;
+
+        $rows.show().filter(function() {
+            text = $(this).text().replace(/\s+/g, ' ');
+            return !reg.test(text);
+        }).hide();
+      });
   }
 
   function querySt(ji) {
