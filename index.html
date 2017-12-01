@@ -193,7 +193,7 @@
 
             this.content.$t.split(", ").forEach(function (el) {
               voices.set((el.split(": "))[0], (el.split(": "))[1]);
-              $("#languages").append("<option value=" + (el.split(": "))[0] + ">" + (el.split(": "))[0] + "</option>");
+              $("#languages").append("<option class='language' value=" + (el.split(": "))[0] + ">" + (el.split(": "))[0] + "</option>");
 
               //            $("#languages").append("<li><a href='' onclick='return false;'>"+(el.split(": "))[0])+"</a></li>";
 
@@ -322,7 +322,7 @@ document.addEventListener('mouseup', function (e) {
     e.preventDefault();
     let targetElement = e.target || event.srcElement;
     if (hasClass(e.target, 'say') || $(targetElement).parents('.say').length) {
-      if ($(targetElement).parents('.say').length) {targetElement = clickSay($(targetElement).parents('.say'));}
+      if ($(targetElement).parents('.say').length) {targetElement = $(targetElement).parents('.say');}
       playflag = 1;
       let text = $(targetElement).attr("data-say");
       let translation = translations[text][currentLang];
@@ -339,8 +339,10 @@ document.addEventListener('mouseup', function (e) {
 
   //change language
   if (hasClass(e.target, 'language')) {
-      currentLang = $(targetElement).text();
-      console.log(currentLang);
+    e.preventDefault();
+    let targetElement = e.target || event.srcElement;
+    currentLang = $(targetElement).val();
+    console.log(currentLang);
   }
 }, false);
 
