@@ -209,12 +209,12 @@
         }
         else{
           var title = this.title.$t.replace(/[^ -~]+/g, "").replace(/(\r\n|\n|\r)/gm,"").trim();
-          var s = '<div class="song amplitude-song-container amplitude-play-pause">';
+          var s = '<div class="song amplitude-song-container amplitude-play-pause say amplitude-paused" data-say="'+title+'">';
           s+='<div class="song-meta-data">';
-          s+='<span class="song-title"><a class="say-text say" href=#'+(i++)+' data-say="'+title+'">'+title+'</a></span>';
+          s+='<span class="song-title">'+title+'</span>';
           s+='</div>';
           s+='<div class="play-now">';
-          s+='<a class="btn btn-sm btn-black say" data-say="'+title+'"><span class="normal-state" >Play</span><span class="play-state">Pause</span></a>';
+          s+='<a class="btn btn-sm btn-black"><span class="normal-state" >Play</span><span class="play-state">Pause</span></a>';
           s+='</div>';
           translations[title] = {};
           //console.log(this.content.$t.split(", "));
@@ -298,49 +298,25 @@
   // })
  // });
 
-  document.addEventListener('click', function (e) {
-    if (hasClass(e.target, 'say')) {
-        e.preventDefault();
-        var targetElement = e.target || event.srcElement;
-        // $(targetElement).toggleClass("fa-play-circle-o fa-play-circle");
-        var text = $(targetElement).attr("data-say");
-        // console.log(Object.keys(translations).find(text));
-        var translation = translations[text][currentLang];
-        responsiveVoice.speak(translation, voices.get(currentLang), {onend: function(){
-          // $(targetElement).toggleClass("fa-play-circle fa-play-circle-o");
-        }});
+ function clickSay(targetElement){
+  var text = $(targetElement).attr("data-say");
+  var translation = translations[text][currentLang];
+  $(targetElement).addClass("amplitude-playing");
+  $(targetElement).removeClass("amplitude-paused");
+  responsiveVoice.speak(translation, voices.get(currentLang), {onend: function(){
+    $(targetElement).removeClass("amplitude-playing");
+    $(targetElement).addClass("amplitude-paused");
+  }});
+ }
 
-        // var text = encodeURIComponent($(targetElement).text());
-        // var url = "http://translate.google.com/translate_tts?tl="+lang+"&q="+text+"&client=t";
-        // console.log(url);
-        // var referrer = "http://translate.google.com/";
-        // $.ajax({
-        //   type: 'GET',
-        //   url: url,
-        //   xhrFields: {
-        //     withCredentials: false
-        //   },
-        //   headers: {
-        //     'X-Alt-Referer': referrer, 
-        //     'Access-Control-Allow-Origin': '*',
-        //     'Access-Control-Allow-Origin': 'http://translate.google.com/',
-        //     'Access-Control-Allow-Methods': "GET, OPTIONS",
-        //     'Access-Control-Allow-Headers': "Authorization, X-Requested-With, Content-Type, Origin, Accept",
-        //     'Access-Control-Allow-Credentials': "true"
-        //   },
-        //   success: function(data) {
-        //     var audioElement = $(targetElement).find("audio:first");
-        //     audioElement.attr('src', data);
-        //     audioElement.get(0).load();
-        //     audioElement.get(0).play();
-        //   },
-        //   error: function() {
-        //   }
-        // });
-        // $(targetElement).find("audio:first").attr('src', url).get(0).play();
+  document.addEventListener('click', function (e) {
+    e.preventDefault();
+    let targetElement = e.target || event.srcElement;
+    if (hasClass(e.target, 'say')) {
+        clickSay(targetElement);
+    } else if ($(targetElement).parents('.say').length) {
+        clickSay($(targetElement).parents('.say'));
     } else if (hasClass(e.target, 'language')) {
-      e.preventDefault();
-      var targetElement = e.target || event.srcElement;
       currentLang = $(targetElement).text();
       console.log(currentLang);
     }
