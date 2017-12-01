@@ -299,25 +299,28 @@
  // });
 
  function clickSay(targetElement){
-  var text = $(targetElement).attr("data-say");
-  var translation = translations[text][currentLang];
+  playflag = 1;
+  let text = $(targetElement).attr("data-say");
+  let translation = translations[text][currentLang];
   $(targetElement).addClass("amplitude-playing");
   $(targetElement).removeClass("amplitude-paused");
   responsiveVoice.speak(translation, voices.get(currentLang), {onend: function(){
     $(targetElement).removeClass("amplitude-playing");
     $(targetElement).addClass("amplitude-paused");
+    playflag = 0;
   }});
  }
 
-var flag = 0; //flag 0 if not click and drag, otherwise 1
+var mouseflag = 0; //flag 0 if not click and drag, otherwise 1
+var playflag = 0;
 document.addEventListener("mousedown", function(){
-    flag = 0;
+    mouseflag = 0;
 }, false);
 document.addEventListener("mousemove", function(){
-    flag = 1;
+    mouseflag = 1;
 }, false);
 document.addEventListener('mouseup', function (e) {
-  if(flag === 0){
+  if(mouseflag === 0 && playflag === 0 ){
     e.preventDefault();
     let targetElement = e.target || event.srcElement;
     if (hasClass(e.target, 'say')) {
