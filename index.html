@@ -298,19 +298,6 @@
   // })
  // });
 
- function clickSay(targetElement){
-  playflag = 1;
-  let text = $(targetElement).attr("data-say");
-  let translation = translations[text][currentLang];
-  $(targetElement).addClass("amplitude-playing");
-  $(targetElement).removeClass("amplitude-paused");
-  responsiveVoice.speak(translation, voices.get(currentLang), {onend: function(){
-    $(targetElement).removeClass("amplitude-playing");
-    $(targetElement).addClass("amplitude-paused");
-    playflag = 0;
-  }});
- }
-
 var mouseflag = 0; //flag 0 if not click and drag, otherwise 1
 var playflag = 0; //flag 0 if responsiveVoice is not playing
 document.addEventListener("mousedown", function(){
@@ -325,6 +312,7 @@ document.addEventListener('mouseup', function (e) {
     e.preventDefault();
     let targetElement = e.target || event.srcElement;
     if (hasClass(e.target, 'amplitude-playing') || $(targetElement).parents('.amplitude-playing').length) {
+      if($(targetElement).parents('.amplitude-playing').length){targetElement = $(targetElement).parents('.amplitude-playing');}
       $(targetElement).removeClass("amplitude-playing");
       $(targetElement).addClass("amplitude-paused");
       responsiveVoice.cancel();
@@ -333,10 +321,18 @@ document.addEventListener('mouseup', function (e) {
   } else if(mouseflag === 0 && playflag === 0 ){
     e.preventDefault();
     let targetElement = e.target || event.srcElement;
-    if (hasClass(e.target, 'say')) {
-        clickSay(targetElement);
-    } else if ($(targetElement).parents('.say').length) {
-        clickSay($(targetElement).parents('.say'));
+    if (hasClass(e.target, 'say') || $(targetElement).parents('.say').length) {
+      if ($(targetElement).parents('.say').length) {targetElement = clickSay($(targetElement).parents('.say'));}
+      playflag = 1;
+      let text = $(targetElement).attr("data-say");
+      let translation = translations[text][currentLang];
+      $(targetElement).addClass("amplitude-playing");
+      $(targetElement).removeClass("amplitude-paused");
+      responsiveVoice.speak(translation, voices.get(currentLang), {onend: function(){
+        $(targetElement).removeClass("amplitude-playing");
+        $(targetElement).addClass("amplitude-paused");
+        setTimeout(function(){ playflag = 0; }, 100);
+      }});
     }
   } 
 
