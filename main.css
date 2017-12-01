@@ -676,3 +676,9 @@ form#translateform button[type="submit"]:hover {
   transition: all 358ms cubic-bezier(0.075, 0.82, 0.165, 1);
   background-color: #004669;
 }
+
+#addSheet {
+  position: fixed;
+  top: 0px;
+  right: 0px; 
+}
