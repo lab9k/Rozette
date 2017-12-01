@@ -127,6 +127,7 @@
   <!-- Track List End -->
 
 
+<<<<<<< HEAD
   </div>
 
 
@@ -135,6 +136,10 @@
   <!-- </body> -->
 
   <!-- <body>
+=======
+    </div>
+<!-- <body>
+>>>>>>> 43b01022bf5d9697d3ab3ff6bd9a8812749fc08a
   <div id="addSheet">
     <a href="/getSheet.html"> Maak eigen Rozette pagina </a>
   </div>
@@ -293,71 +298,43 @@
     getSheet(url);
 
 
-    // var voicelist = responsiveVoice.getVoices();
-    // voicelist.forEach(function(voice){
-    //   console.log('case "en": row[i] = "'+voice.name+'"; break;');
-    // })
-
-    // $(function(){
-    // $('a.say').on('click', function(e){
-    //   console.log("clicked");
-    // })
-    // });
-
-    document.addEventListener('click', function (e) {
-      if (hasClass(e.target, 'say')) {
-        e.preventDefault();
-        var targetElement = e.target || event.srcElement;
-        // $(targetElement).toggleClass("fa-play-circle-o fa-play-circle");
-        var text = $(targetElement).attr("data-say");
-        // console.log(Object.keys(translations).find(text));
-        var translation = translations[text][currentLang];
-        responsiveVoice.speak(translation, voices.get(currentLang), {          
-onend: function () {
-            // $(targetElement).toggleClass("fa-play-circle fa-play-circle-o");
-          }
-        });
-
-        // var text = encodeURIComponent($(targetElement).text());
-        // var url = "http://translate.google.com/translate_tts?tl="+lang+"&q="+text+"&client=t";
-        // console.log(url);
-        // var referrer = "http://translate.google.com/";
-        // $.ajax({
-        //   type: 'GET',
-        //   url: url,
-        //   xhrFields: {
-        //     withCredentials: false
-        //   },
-        //   headers: {
-        //     'X-Alt-Referer': referrer, 
-        //     'Access-Control-Allow-Origin': '*',
-        //     'Access-Control-Allow-Origin': 'http://translate.google.com/',
-        //     'Access-Control-Allow-Methods': "GET, OPTIONS",
-        //     'Access-Control-Allow-Headers': "Authorization, X-Requested-With, Content-Type, Origin, Accept",
-        //     'Access-Control-Allow-Credentials': "true"
-        //   },
-        //   success: function(data) {
-        //     var audioElement = $(targetElement).find("audio:first");
-        //     audioElement.attr('src', data);
-        //     audioElement.get(0).load();
-        //     audioElement.get(0).play();
-        //   },
-        //   error: function() {
-        //   }
-        // });
-        // $(targetElement).find("audio:first").attr('src', url).get(0).play();
-      } else if (hasClass(e.target, 'language')) {
-        e.preventDefault();
-        var targetElement = e.target || event.srcElement;
-        currentLang = $(targetElement).text();
-        console.log(currentLang);
-      }
+    function clickSay(targetElement){
+      var text = $(targetElement).attr("data-say");
+      var translation = translations[text][currentLang];
+      $(targetElement).addClass("amplitude-playing");
+      $(targetElement).removeClass("amplitude-paused");
+      responsiveVoice.speak(translation, voices.get(currentLang), {onend: function(){
+        $(targetElement).removeClass("amplitude-playing");
+        $(targetElement).addClass("amplitude-paused");
+      }});
+     }
+    
+    var flag = 0; //flag 0 if not click and drag, otherwise 1
+    document.addEventListener("mousedown", function(){
+        flag = 0;
     }, false);
-
-    function hasClass(elem, className) {
-      return elem.className.split(' ').indexOf(className) > -1;
+    document.addEventListener("mousemove", function(){
+        flag = 1;
+    }, false);
+    document.addEventListener('mouseup', function (e) {
+      if(flag === 0){
+        e.preventDefault();
+        let targetElement = e.target || event.srcElement;
+        if (hasClass(e.target, 'say')) {
+            clickSay(targetElement);
+        } else if ($(targetElement).parents('.say').length) {
+            clickSay($(targetElement).parents('.say'));
+        } else if (hasClass(e.target, 'language')) {
+          currentLang = $(targetElement).text();
+          console.log(currentLang);
+      }
     }
-  </script>
+    }, false);
+    
+      function hasClass(elem, className) {
+        return elem.className.split(' ').indexOf(className) > -1;
+    }
+    </script>
   <!-- Script -->
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
