@@ -34,12 +34,6 @@
       </div>
       <div class="col-md-4">
         <div class="affix">
-          <form id="translateform">
-            <label>Originele tekst</label>
-            <textarea id="translatethis" cols="60" rows="8"></textarea>
-            <label>Vertaling</label>
-            <textarea id="translatedtext" cols="60" rows="8" readonly></textarea>
-          </form>
         </div>
       </div>
     </div>
@@ -174,18 +168,6 @@
   //   console.log("clicked");
   // })
  // });
-
-var oldVal = "";
-$('#translatethis').on('change keyup paste', function() {
-  var currentVal = $(this).val();
-    if(currentVal == oldVal) {
-        return; //check to prevent multiple simultaneous triggers
-    }
-
-    oldVal = currentVal;
-    //action to be performed on textarea changed
-    $('#translatedtext').val(currentVal);
-});
 
   document.addEventListener('click', function (e) {
     if (hasClass(e.target, 'say')) {
