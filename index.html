@@ -61,7 +61,7 @@
 
 
                       <div class="album-art-space">
-                        <textarea rows="8" name="message" id="message" placeholder="Your message" required=""></textarea>
+                        <textarea id="text-say" rows="6" placeholder="Click op een term/zin" readonly></textarea>
                       </div>
                     </div>
                     <div id="amplitude-left" class="audio-controller-wrap">
@@ -328,6 +328,7 @@ document.addEventListener('mouseup', function (e) {
       let translation = translations[text][currentLang];
       $(targetElement).addClass("amplitude-playing");
       $(targetElement).removeClass("amplitude-paused");
+      $('#text-say').val(translation);
       responsiveVoice.speak(translation, voices.get(currentLang), {onend: function(){
         $(targetElement).removeClass("amplitude-playing");
         $(targetElement).addClass("amplitude-paused");
