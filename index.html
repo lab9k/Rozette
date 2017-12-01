@@ -214,7 +214,7 @@
             s += '<span class="song-title">' + title + '</span>';
             s += '</div>';
             s += '<div class="play-now">';
-            s += '<a class="btn btn-sm btn-black"><span class="normal-state" >Play</span><span class="play-state">Pause</span></a>';
+            s += '<a class="btn btn-sm btn-black"><span class="normal-state" >Play</span><span class="play-state">Stop</span></a>';
             s += '</div>';
             translations[title] = {};
             //console.log(this.content.$t.split(", "));
@@ -312,7 +312,7 @@
  }
 
 var mouseflag = 0; //flag 0 if not click and drag, otherwise 1
-var playflag = 0;
+var playflag = 0; //flag 0 if responsiveVoice is not playing
 document.addEventListener("mousedown", function(){
     mouseflag = 0;
 }, false);
@@ -320,18 +320,31 @@ document.addEventListener("mousemove", function(){
     mouseflag = 1;
 }, false);
 document.addEventListener('mouseup', function (e) {
-  if(mouseflag === 0 && playflag === 0 ){
+  //responsiveVoice elements
+  if(playflag === 1){
+    e.preventDefault();
+    let targetElement = e.target || event.srcElement;
+    if (hasClass(e.target, 'amplitude-playing') || $(targetElement).parents('.amplitude-playing').length) {
+      $(targetElement).removeClass("amplitude-playing");
+      $(targetElement).addClass("amplitude-paused");
+      responsiveVoice.cancel();
+      playflag = 0;
+    }
+  } else if(mouseflag === 0 && playflag === 0 ){
     e.preventDefault();
     let targetElement = e.target || event.srcElement;
     if (hasClass(e.target, 'say')) {
         clickSay(targetElement);
     } else if ($(targetElement).parents('.say').length) {
         clickSay($(targetElement).parents('.say'));
-    } else if (hasClass(e.target, 'language')) {
+    }
+  } 
+
+  //change language
+  if (hasClass(e.target, 'language')) {
       currentLang = $(targetElement).text();
       console.log(currentLang);
   }
-}
 }, false);
 
   function hasClass(elem, className) {
