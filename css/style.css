@@ -2917,7 +2917,6 @@ textarea {
 textarea, .theme-bg
 textarea {
   color: #000000;
-  border: 1px solid #c8c6c6;
   /* background-color: rgba(255, 255, 255, 0.15); */
   /* margin-bottom: 3em; */
 }
@@ -3190,4 +3189,20 @@ border-color:#ccc;
   color: #404040;
 }
 
+#logodigipolis {
+  max-width: 250px;
+}
+
+#logolab9k {
+  min-width:150px;
+  margin-top: 15px;
+  margin-left: 15px;
+  
+}
+
+
+#footer {
+  background-color: #2a2a2a;
+  color: white;
+}
 
