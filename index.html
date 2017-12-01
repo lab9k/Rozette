@@ -305,7 +305,15 @@
   }});
  }
 
-  document.addEventListener('click', function (e) {
+var flag = 0; //flag 0 if not click and drag, otherwise 1
+document.addEventListener("mousedown", function(){
+    flag = 0;
+}, false);
+document.addEventListener("mousemove", function(){
+    flag = 1;
+}, false);
+document.addEventListener('mouseup', function (e) {
+  if(flag === 0){
     e.preventDefault();
     let targetElement = e.target || event.srcElement;
     if (hasClass(e.target, 'say')) {
@@ -315,7 +323,8 @@
     } else if (hasClass(e.target, 'language')) {
       currentLang = $(targetElement).text();
       console.log(currentLang);
-    }
+  }
+}
 }, false);
 
   function hasClass(elem, className) {
