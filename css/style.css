@@ -1,43 +1,5 @@
-/*=======================================================================
-* Template Name: Music - A Fresh Music, Band &amp; Dj Template
-* Template URI: http://codepassenger.com/html/music
-* Author: CodePassenger
-* Author URI: http://codepassenger.com/
-* Description: A Bootstrap 3 Full and Final HTML Template for music band, dj, music agency or any kind of website related to music industry
-* Version: 1.0
-* License: GPL v2 or later
-* License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-* Tags: html, template, music, marketing, codepassenger
-======================================================================= */
-/* Table of content
---------------------------------------------
-General
-Button
-Header
-Banner
-Upcoming Album
-Upcoming Stage
-Artist
-About Singer
-Next Event
-Show Styles
-Gallery
-Products
-Latest Album
-Music Player
-Blog
-Blog Single
-Subscription
-Footer
-Page Header
-About Band
-About Artist
-Album
-Single Concert Page
-Contact Page
-FAQs
-404 Styles
-------------------------------------------*/
+
+
 /*----------------------------
 General
 ----------------------------*/
@@ -101,12 +63,12 @@ h6,
 }
 
 a {
-  color: #fc427f;
+  color: #4885ed;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 a:focus, a:visited, a:active {
-  color: #fc427f;
+  color: #4885ed;
   outline: none;
   text-decoration: none;
 }
@@ -130,7 +92,7 @@ a:hover {
 }
 
 .theme-bg {
-  background-color: #fc427f;
+  background-color: #4885ed;
   color: #ffffff;
 }
 
@@ -148,7 +110,7 @@ a:hover {
 }
 
 .theme-color {
-  color: #fc427f;
+  color: #4885ed;
 }
 
 .section-header {
@@ -231,8 +193,8 @@ Button
 ----------------------------*/
 .btn {
   line-height: 38px;
-  border: 2px solid #fc427f;
-  background-color: #fc427f;
+  border: 2px solid #4885ed;
+  background-color: #4885ed;
   color: #ffffff;
   padding: 0 29px;
   border-radius: 21px;
@@ -243,7 +205,7 @@ Button
   font-size: 1.4rem;
 }
 .btn:active, .btn:focus, .btn:active:focus, .btn:visited {
-  background-color: #fc427f;
+  background-color: #4885ed;
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
@@ -259,18 +221,18 @@ Button
 }
 .btn .fa {
   margin-right: 4px;
-  color: #fc427f;
+  color: #4885ed;
 }
 .btn.btn-border {
   background-color: transparent;
-  color: #fc427f;
+  color: #4885ed;
 }
 .btn.btn-border:active, .btn.btn-border:focus, .btn.btn-border:active:focus, .btn.btn-border:visited {
   background-color: transparent;
-  color: #fc427f;
+  color: #4885ed;
 }
 .btn.btn-border:hover, .btn.btn-border:hover:active, .btn.btn-border:hover:focus, .btn.btn-border:hover:active:focus {
-  background-color: #fc427f;
+  background-color: #4885ed;
   color: #ffffff;
 }
 .btn.btn-border.btn-white {
@@ -282,7 +244,7 @@ Button
   color: #ffffff;
 }
 .btn.btn-border.btn-white:hover, .btn.btn-border.btn-white:focus:hover, .btn.btn-border.btn-white:active:hover, .btn.btn-border.btn-white:active:focus:hover {
-  color: #fc427f;
+  color: #4885ed;
 }
 .btn.btn-border.btn-black {
   background-color: transparent;
@@ -295,17 +257,17 @@ Button
 }
 .btn.btn-border.btn-black:hover, .btn.btn-border.btn-black:focus:hover, .btn.btn-border.btn-black:active:hover, .btn.btn-border.btn-black:active:focus:hover {
   color: #ffffff;
-  border-color: #fc427f;
+  border-color: #4885ed;
 }
 .btn.btn-white {
   background-color: #ffffff;
   border-color: #ffffff;
-  color: #fc427f;
+  color: #4885ed;
 }
 .btn.btn-white:active, .btn.btn-white:focus, .btn.btn-white:active:focus, .btn.btn-white:visited {
   background-color: #ffffff;
   border-color: #ffffff;
-  color: #fc427f;
+  color: #4885ed;
 }
 .btn.btn-white:hover, .btn.btn-white:hover:active, .btn.btn-white:hover:focus, .btn.btn-white:hover:active:focus {
   background-color: #f7f7f7;
@@ -332,8 +294,8 @@ Button
   color: #ffffff;
 }
 .btn.btn-black:hover, .btn.btn-black:hover:active, .btn.btn-black:hover:focus, .btn.btn-black:hover:active:focus {
-  background-color: #fc427f;
-  border-color: #fc427f;
+  background-color: #4885ed;
+  border-color: #4885ed;
   color: #ffffff;
 }
 .btn.btn-simple {
@@ -348,8 +310,8 @@ Button
 }
 .btn.btn-simple:hover, .btn.btn-simple:active:hover, .btn.btn-simple:focus:hover, .btn.btn-simple:hover:active:focus {
   color: #ffffff;
-  background-color: #fc427f;
-  border-color: #fc427f;
+  background-color: #4885ed;
+  border-color: #4885ed;
 }
 .btn.btn-lg {
   line-height: 49px;
@@ -406,15 +368,15 @@ Header
   color: #111111;
 }
 .navbar-default .navbar-nav > li > a:hover {
-  color: #fc427f;
+  color: #4885ed;
 }
 .navbar-default .navbar-nav > li.active a {
   color: #ffffff;
-  background-color: #fc427f;
+  background-color: #4885ed;
 }
 .navbar-default .navbar-nav > li.active a:hover, .navbar-default .navbar-nav > li.active a:hover, .navbar-default .navbar-nav > li.active a:visited {
   color: #ffffff;
-  background-color: #fc427f;
+  background-color: #4885ed;
 }
 .navbar-default .navbar-nav > li:last-child .dropdown-menu, .navbar-default .navbar-nav > li:nth-last-child(2) .dropdown-menu {
   right: 0;
@@ -425,7 +387,7 @@ Header
   top: 0;
 }
 .navbar-default .navbar-nav > li > .dropdown-menu {
-  border-top: 3px solid #fc427f;
+  border-top: 3px solid #4885ed;
 }
 .navbar-default .navbar-nav > li.dropdown > a:after {
   content: "\f107";
@@ -470,7 +432,7 @@ Header
   color: #111111;
 }
 .navbar-default .navbar-nav .dropdown-menu > li > a:hover {
-  color: #fc427f;
+  color: #4885ed;
 }
 .navbar-default .navbar-nav li:hover > .dropdown-menu {
   opacity: 1;
@@ -611,7 +573,7 @@ Banner
 }
 .banner-slider .owl-prev:hover,
 .banner-slider .owl-next:hover {
-  background-color: #fc427f;
+  background-color: #4885ed;
   opacity: 1;
 }
 .banner-slider .owl-prev {
@@ -696,7 +658,7 @@ Upcoming Stage
 
 .countdown-stage {
   width: 100%;
-  background-color: #fc427f;
+  background-color: #4885ed;
   color: #ffffff;
   margin-top: 20px;
   padding: 13px 30px;
@@ -1083,13 +1045,13 @@ Gallery
   margin-left: 6px;
 }
 .filter-button-group button:hover {
-  color: #fc427f;
-  border-color: #fc427f;
+  color: #4885ed;
+  border-color: #4885ed;
 }
 .filter-button-group button.active {
   color: #ffffff;
-  background-color: #fc427f;
-  border-color: #fc427f;
+  background-color: #4885ed;
+  border-color: #4885ed;
 }
 
 /*--------------------------------
@@ -1141,8 +1103,8 @@ Products
 }
 .product-thumb .product-thumb-hover .btn:hover, .product-thumb .product-thumb-hover .btn:active:hover, .product-thumb .product-thumb-hover .btn:focus:hover {
   color: #ffffff;
-  background-color: #fc427f;
-  border-color: #fc427f;
+  background-color: #4885ed;
+  border-color: #4885ed;
 }
 .product-thumb:hover .product-thumb-hover {
   opacity: 1;
@@ -1165,7 +1127,7 @@ Products
   color: inherit;
 }
 .product-detail .product-name a:hover {
-  color: #fc427f;
+  color: #4885ed;
 }
 .product-detail .product-price {
   font-size: 1.4rem;
@@ -1332,7 +1294,6 @@ Music Player
 .album-art-block .album-art-space {
   position: relative;
   width: 100%;
-  padding-top: 75%;
   overflow: hidden;
   margin-top: 30px;
 }
@@ -1371,12 +1332,12 @@ Music Player
   margin-top: 3px;
 }
 .audio-controller-wrap input[type='range'].amplitude-song-slider::-webkit-slider-thumb {
-  background-color: #fc427f;
+  background-color: #4885ed;
   width: 3px;
   -webkit-appearance: none;
 }
 .audio-controller-wrap input[type='range']::-webkit-slider-runnable-track {
-  color: #fc427f;
+  color: #4885ed;
   height: 6px;
 }
 .audio-controller-wrap input[type='range'].amplitude-volume-slider {
@@ -1454,7 +1415,7 @@ Music Player
 
 .slimScrollDiv .slimScrollBar {
   width: 10px !important;
-  background-color: #fc427f !important;
+  background-color: #4885ed !important;
   border-radius: 5px !important;
 }
 .slimScrollDiv .slimScrollRail {
@@ -1496,7 +1457,7 @@ Music Player
   display: none;
 }
 .amplitude-song-container.amplitude-playing {
-  background-color: #fc427f;
+  background-color: #4885ed;
   color: #ffffff;
 }
 .amplitude-song-container.amplitude-playing .song-title {
@@ -1537,7 +1498,7 @@ Music Player
 }
 .text-white .amplitude-song-container.amplitude-playing,
 .theme-bg .amplitude-song-container.amplitude-playing {
-  background-color: #fc427f;
+  background-color: #4885ed;
 }
 .text-white .player-track-list-block,
 .theme-bg .player-track-list-block {
@@ -1578,7 +1539,7 @@ Blog
   color: inherit;
 }
 .post-title a:hover {
-  color: #fc427f;
+  color: #4885ed;
 }
 
 .post-date {
@@ -1642,11 +1603,11 @@ a.page-numbers:active {
 }
 .page-numbers.current,
 a.page-numbers.current {
-  border-color: #fc427f;
+  border-color: #4885ed;
 }
 .page-numbers:hover,
 a.page-numbers:hover {
-  color: #fc427f;
+  color: #4885ed;
 }
 
 /*-------------------------------------------
@@ -1676,13 +1637,13 @@ Blog Single
   color: #111111;
 }
 .blog-single .post-metas a.post-meta:hover {
-  color: #fc427f;
+  color: #4885ed;
 }
 .blog-single .share-post {
   margin-top: 20px;
   font-size: 1.4rem;
   font-weight: 600;
-  color: #fc427f;
+  color: #4885ed;
 }
 .blog-single .share-post label {
   font-weight: 600;
@@ -1704,7 +1665,7 @@ Blog Single
 .post-entry blockquote {
   font-weight: 400;
   font-size: 1.4rem;
-  border-left: 5px solid #fc427f;
+  border-left: 5px solid #4885ed;
   margin: 0 0 20px 30px;
   padding: 22px 17px;
 }
@@ -1716,7 +1677,7 @@ Blog Single
   padding: 60px;
   color: #ffffff;
   margin-top: 25px;
-  background-color: #fc427f;
+  background-color: #4885ed;
 }
 .author-box .author-thumb {
   float: left;
@@ -1798,7 +1759,7 @@ Blog Single
 
 .comment-reply {
   float: right;
-  color: #fc427f;
+  color: #4885ed;
 }
 .comment-reply:hover {
   color: #111111;
@@ -1892,7 +1853,7 @@ Blog Single
   top: 0;
   right: 0;
   line-height: 46px;
-  color: #fc427f;
+  color: #4885ed;
   width: 70px;
   text-align: center;
 }
@@ -1911,7 +1872,7 @@ Blog Single
   font-weight: 400;
 }
 .widget ul > li > a:hover {
-  color: #fc427f;
+  color: #4885ed;
 }
 .widget ul > li > a:before {
   content: "\f105";
@@ -1947,7 +1908,7 @@ Blog Single
   display: block;
 }
 .widget .widget-post-title:hover {
-  color: #fc427f;
+  color: #4885ed;
 }
 .widget .widget-post-date {
   font-weight: 400;
@@ -1969,7 +1930,7 @@ Blog Single
   margin: 0 6px 10px 0;
 }
 .widget .widget-tag a:hover {
-  border-color: #fc427f;
+  border-color: #4885ed;
 }
 .widget .social-media a {
   display: inline-block;
@@ -1978,7 +1939,7 @@ Blog Single
   color: #111111;
 }
 .widget .social-media a:hover {
-  color: #fc427f;
+  color: #4885ed;
 }
 .widget .social-media a + a {
   margin-left: 21px;
@@ -2007,7 +1968,7 @@ Blog Single
   content: "";
   bottom: 0;
   position: absolute;
-  background-color: #fc427f;
+  background-color: #4885ed;
   height: 5px;
   width: 50px;
   left: 0;
@@ -2111,7 +2072,7 @@ Footer
   color: #ffffff;
 }
 .copyright-footer a:hover {
-  color: #fc427f;
+  color: #4885ed;
 }
 
 /*--------------------------------
@@ -2206,7 +2167,7 @@ About Band
   margin-top: 45px;
 }
 .doing-item .doing-icon {
-  color: #fc427f;
+  color: #4885ed;
   font-size: 3.5rem;
   line-height: 1;
 }
@@ -2269,7 +2230,7 @@ About Band
   color: #111111;
 }
 .band-artist-hover .btn:hover {
-  color: #fc427f;
+  color: #4885ed;
 }
 
 .band-artist:hover .band-artist-hover {
@@ -2347,18 +2308,18 @@ About Artist
   background-color: #ffffff;
 }
 .plyr .plyr__play-large svg {
-  color: #fc427f;
+  color: #4885ed;
 }
 .plyr input[type=range] {
   background-color: transparent !important;
   padding: 0 !important;
 }
 .plyr input[type=range]:active::-webkit-slider-thumb {
-  background-color: #fc427f;
+  background-color: #4885ed;
 }
 .plyr .plyr__progress--played,
 .plyr .plyr__volume--display {
-  color: #fc427f;
+  color: #4885ed;
 }
 
 .plyr--video .plyr__controls {
@@ -2367,7 +2328,7 @@ About Artist
 
 .plyr--video .plyr__controls button.tab-focus:focus,
 .plyr--video .plyr__controls button:hover {
-  background-color: #fc427f;
+  background-color: #4885ed;
 }
 
 /*** Artist Gallery ***/
@@ -2481,7 +2442,7 @@ About Artist
 }
 .instagram-feed-link:hover {
   color: #ffffff;
-  background-color: #fc427f;
+  background-color: #4885ed;
 }
 .instagram-feed-link .fa {
   font-size: 2.5rem;
@@ -2571,7 +2532,7 @@ Album
   display: inline-block;
   font-size: 1.8rem;
   color: #111111;
-  border: 2px solid #fc427f;
+  border: 2px solid #4885ed;
   height: 40px;
   width: 40px;
   line-height: 36px;
@@ -2583,12 +2544,12 @@ Album
 }
 .album-review-carousel .owl-prev:hover,
 .album-review-carousel .owl-next:hover {
-  background-color: #fc427f;
+  background-color: #4885ed;
   color: #ffffff;
 }
 
 .rating-star {
-  color: #fc427f;
+  color: #4885ed;
 }
 .rating-star + .rating-star {
   margin-left: 6px;
@@ -2629,9 +2590,9 @@ Album
   color: #ffffff;
 }
 .purchase-button-wrap .btn.btn-border.btn-white:hover {
-  background-color: #fc427f;
+  background-color: #4885ed;
   color: #ffffff;
-  border-color: #fc427f;
+  border-color: #4885ed;
 }
 
 /*--------------------------------
@@ -2699,7 +2660,7 @@ Single Concert Page
 }
 .widget .ticket-pricing-item {
   margin: 15px;
-  border: 1px solid #fc427f;
+  border: 1px solid #4885ed;
   display: inline-block;
   float: left;
   width: calc(50% - 30px);
@@ -2726,7 +2687,7 @@ Single Concert Page
   border-radius: 14.5px;
 }
 .widget .ticket-btn:hover {
-  background-color: #fc427f;
+  background-color: #4885ed;
   color: #ffffff;
 }
 .widget .upcoming-shows {
@@ -2821,7 +2782,7 @@ Contact Page
 }
 
 .contact-info-item {
-  background-color: #fc427f;
+  background-color: #4885ed;
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -2896,8 +2857,8 @@ Contact Page
 }
 .contact-form .btn.btn-white:hover {
   color: #ffffff;
-  background-color: #fc427f;
-  border-color: #fc427f;
+  background-color: #4885ed;
+  border-color: #4885ed;
 }
 
 .form-map-section .fluid-container {
@@ -2956,8 +2917,10 @@ textarea {
 .text-white input:not([type=radio]):not([type=checkbox]), .theme-bg input:not([type=radio]):not([type=checkbox]), .text-white
 textarea, .theme-bg
 textarea {
-  color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.15);
+  color: #000000;
+  border: 1px solid #c8c6c6;
+  /* background-color: rgba(255, 255, 255, 0.15); */
+  /* margin-bottom: 3em; */
 }
 input:not([type=radio]):not([type=checkbox]):focus,
 textarea:focus {
@@ -2985,7 +2948,7 @@ textarea {
 }
 
 .input-error {
-  background-color: #fc427f;
+  background-color: #4885ed;
 }
 
 /*----------------------------
@@ -3038,7 +3001,7 @@ FAQs
   padding-right: 30px;
 }
 .panel-group .panel.panel-default .panel-title > a[aria-expanded="true"] {
-  background-color: #fc427f;
+  background-color: #4885ed;
   color: #ffffff;
   padding-left: 30px;
 }
@@ -3081,13 +3044,13 @@ FAQs
 .panel-group .panel.panel-iconic .panel-title > a {
   color: #ffffff;
   display: block;
-  background-color: #fc427f;
+  background-color: #4885ed;
   position: relative;
   padding: 17px 0 17px 70px;
 }
 .panel-group .panel.panel-iconic .panel-title > a .fa {
   background-color: #ffffff;
-  color: #fc427f;
+  color: #4885ed;
   position: absolute;
   top: 0;
   left: 0;
@@ -3152,7 +3115,7 @@ FAQs
   padding: 17px 30px;
 }
 .section-404 .searchform [type=submit] {
-  color: #fc427f;
+  color: #4885ed;
   background-color: transparent;
   border: 1px solid transparent;
   position: absolute;
@@ -3160,4 +3123,22 @@ FAQs
   right: 0;
   font-size: 1.8rem;
   padding: 13px 30px;
+}
+
+
+.stylish-input-group .input-group-addon{
+  background: white !important; 
+}
+.stylish-input-group .form-control{
+border-right:0; 
+box-shadow:0 0 0; 
+border-color:#ccc;
+}
+.stylish-input-group button{
+  border:0;
+  background:transparent;
+}
+
+#searchfield {
+  margin-bottom: 1em;
 }
