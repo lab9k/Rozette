@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,129 +27,114 @@
 
 <body class="page">
 
-        <!-- Track List -->
-        <div class="section tracks-section text-white">
-            <div class="overlay section-padding">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2 col-xs-12">
-                            <div class="section-header text-center">
-                                <h3 class="section-title">Rozette</h3>
-                                <p class="section-subtext">Translate to speech</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                       
-                        <div class="col-xs-12">
-                            <div class="music-wrap">
-                                <div class="row">
-                                    <div class="col-md-4 col-sm-5 col-xs-6">
-                                        <div id="player-one" class="player-main-block">
-                                            <div class="album-art-block">
-                                                <div class="track-meta-info" id="meta-container">
-                                                
-                                                    <span class="song-name" amplitude-song-info="name" amplitude-main-song-info="true">Vertaling</span>
-                                                </div>
-
-                                                <div class="tabbable-panel">
-                                                   <div class="tabbable-line">
-                                                      <ul id="languages" class="nav nav-tabs ">					
-                                                      </ul>			
-                                                   </div>
-                                                </div>
-
-                                                <div class="album-art-space">
-                                                    <textarea rows="8" name="message" id="message" placeholder="Your message" required=""></textarea>
-                                                </div>
-                                            </div>
-                                            <div id="amplitude-left" class="audio-controller-wrap">
-                                                <div id="player-left-bottom">
-
-                                                    <div class="time-controller-block" id="time-container">
-                                                        <div class="input-range-block">
-                                                            <span class="current-time">
-												            <span class="amplitude-current-minutes" amplitude-main-current-minutes="true"></span>:<span class="amplitude-current-seconds" amplitude-main-current-seconds="true"></span>
-                                                            </span>
-                                                            <div class="track-progress-wrap">
-                                                                <input type="range" class="amplitude-song-slider full-width" min="1" max="100" step="1" amplitude-main-song-slider="true" />
-                                                                <div class="track-progress"></div>
-                                                            </div>
-                                                            <span class="duration">
-												            <span class="amplitude-duration-minutes" amplitude-main-duration-minutes="true"></span>:<span class="amplitude-duration-seconds" amplitude-main-duration-seconds="true"></span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div id="control-container" class="control-container">
-                                                        <div id="central-control-container">
-                                                            <div id="central-controls" class="audio-controller-block">
-                                                                <div class="controller-common amplitude-prev" id="previous"></div>
-                                                                <div class="controller-common amplitude-play-pause play-pause-btn" amplitude-main-play-pause="true" id="play-pause"></div>
-                                                                <div class="controller-common amplitude-next" id="next"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="player-footer">
-                                                        <div class="volume-container">
-                                                            <i class="fa fa-volume-down" aria-hidden="true"></i>
-                                                            <input type="range" class="amplitude-volume-slider volume-slider-one" />
-                                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8 col-sm-7 col-xs-6">
-                                         <div id="searchfield" class="input-group stylish-input-group">
-                                            <input id="search" type="text" class="form-control"  placeholder="Search" >
-                                            <span class="input-group-addon">
-                                                <button type="submit">
-                                                    <span class="fa fa-search"></span>
-                                                </button>  
-                                            </span>
-                                        </div>
-                                        <div id="translations" class="player-track-list-block table-responsive-vertical">
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  <!-- Track List -->
+  <div class="section tracks-section text-white">
+    <div class="overlay section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 col-xs-12">
+            <div class="section-header text-center">
+              <h3 class="section-title">Rozette</h3>
+              <p class="section-subtext">Translate to speech</p>
             </div>
+          </div>
         </div>
-        <!-- Track List End -->
+        <div class="row">
+
+          <div class="col-xs-12">
+            <div class="music-wrap">
+              <div class="row">
+                <div class="col-md-4 col-sm-5 col-xs-6">
+                  <div id="player-one" class="player-main-block">
+                    <div class="album-art-block">
+                      <div class="track-meta-info" id="meta-container">
+
+                        <span class="song-name" amplitude-song-info="name" amplitude-main-song-info="true">Vertaling</span>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="sel1">Language:</label>
+                        <select class="form-control" id="languages">
+                          <option value="0">Selecteer taal...</option>                            
+                        </select>
+                      </div>
 
 
+                      <div class="album-art-space">
+                        <textarea rows="8" name="message" id="message" placeholder="Your message" required=""></textarea>
+                      </div>
+                    </div>
+                    <div id="amplitude-left" class="audio-controller-wrap">
+                      <div id="player-left-bottom">
+
+                        <div class="time-controller-block" id="time-container">
+                          <div class="input-range-block">
+                            <span class="current-time">
+                              <span class="amplitude-current-minutes" amplitude-main-current-minutes="true"></span>:
+                              <span class="amplitude-current-seconds" amplitude-main-current-seconds="true"></span>
+                            </span>
+                            <div class="track-progress-wrap">
+                              <input type="range" class="amplitude-song-slider full-width" min="1" max="100" step="1" amplitude-main-song-slider="true"
+                              />
+                              <div class="track-progress"></div>
+                            </div>
+                            <span class="duration">
+                              <span class="amplitude-duration-minutes" amplitude-main-duration-minutes="true"></span>:
+                              <span class="amplitude-duration-seconds" amplitude-main-duration-seconds="true"></span>
+                            </span>
+                          </div>
+                        </div>
+                        <div id="control-container" class="control-container">
+                          <div id="central-control-container">
+                            <div id="central-controls" class="audio-controller-block">
+                              <div class="controller-common amplitude-prev" id="previous"></div>
+                              <div class="controller-common amplitude-play-pause play-pause-btn" amplitude-main-play-pause="true" id="play-pause"></div>
+                              <div class="controller-common amplitude-next" id="next"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="player-footer">
+                          <div class="volume-container">
+                            <i class="fa fa-volume-down" aria-hidden="true"></i>
+                            <input type="range" class="amplitude-volume-slider volume-slider-one" />
+                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-8 col-sm-7 col-xs-6">
+                  <div id="searchfield" class="input-group stylish-input-group">
+                    <input id="search" type="text" class="form-control" placeholder="Search">
+                    <span class="input-group-addon">
+                      <button type="submit">
+                        <span class="fa fa-search"></span>
+                      </button>
+                    </span>
+                  </div>
+                  <div id="translations" class="player-track-list-block table-responsive-vertical">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+  <!-- Track List End -->
 
-   
 
-<<<<<<< HEAD
+  </div>
 
-<!-- </body> -->
-=======
-    <!-- Script -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/owl.carousel.js"></script>
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/plyr.js"></script>
-    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/jquery.countdown.min.js"></script>
-    <script src="assets/js/tether.min.js"></script>
-    <script src="assets/js/jquery.slimscroll.min.js"></script>
-    <script src="assets/js/amplitude.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmiJjq5DIg_K9fv6RE72OY__p9jz0YTMI"></script>
-    <script src="js/map.js"></script>
-    <script src="js/custom.js"></script>
->>>>>>> 923153984d8f2a0b1e48081a0f600925b5ab0346
 
-<!-- <body>
+
+
+  <!-- </body> -->
+
+  <!-- <body>
   <div id="addSheet">
     <a href="/getSheet.html"> Maak eigen Rozette pagina </a>
   </div>
@@ -172,7 +158,7 @@
       </div>
     </div>
   </div> -->
-<!-- <script>
+  <!-- <script>
   (function($) {
     var element = $('.follow-scroll'),
         originalY = element.offset().top;
@@ -194,142 +180,143 @@
     });
 })(jQuery);
 </script> -->
-<script>
-  var currentLang = "en";
-  var voices = new Map(); //map countrycode -> name of corresponding voice
-  var translations = {};
+  <script>
+    var currentLang = "en";
+    var voices = new Map(); //map countrycode -> name of corresponding voice
+    var translations = {};
 
-  function getSheet(url){
-    $.getJSON(url, function(data) {
+    function getSheet(url) {
+      $.getJSON(url, function (data) {
 
-      var entry = data.feed.entry;
+        var entry = data.feed.entry;
 
-      // $( ".translationshead" ).append( "<th>Nederlands</th>"); 
-      var i = 0;
+        // $( ".translationshead" ).append( "<th>Nederlands</th>"); 
+        var i = 0;
 
-      $(entry).each(function(index, element){
-        if(voices.size == 0){
-          //console.log(this.content.$t.split(", "));
-    
-          this.content.$t.split(", ").forEach(function(el) {
-            voices.set((el.split(": "))[0] ,(el.split(": "))[1]);
-            $("#languages").append("<li><a href='' onclick='return false;' data-toggle='tab'>"+(el.split(": "))[0])+"</a></li>";
-          
-            //            $("#languages").append("<li><a href='' onclick='return false;'>"+(el.split(": "))[0])+"</a></li>";
+        $(entry).each(function (index, element) {
+          if (voices.size == 0) {
+            //console.log(this.content.$t.split(", "));
+
+            this.content.$t.split(", ").forEach(function (el) {
+              voices.set((el.split(": "))[0], (el.split(": "))[1]);
+              $("#languages").append("<option value=" + (el.split(": "))[0] + ">" + (el.split(": "))[0] + "</option>");
+
+              //            $("#languages").append("<li><a href='' onclick='return false;'>"+(el.split(": "))[0])+"</a></li>";
 
 
-            
-            // $( ".translationshead" ).append( "<th>"+(el.split(": "))[1]+"</th>");
-            //console.log((el.split(": "))[1]);
-          });
-        }
-        else{
-
+              // $( ".translationshead" ).append( "<th>"+(el.split(": "))[1]+"</th>");
+              //console.log((el.split(": "))[1]);
+            });
+          }
+          else {
 
 
 
 
-          var title = this.title.$t.replace(/[^ -~]+/g, "").replace(/(\r\n|\n|\r)/gm,"").trim();
-          var s = '<div class="song amplitude-song-container amplitude-play-pause amplitude-active-song-container ">';
-          s+='<div class="song-meta-data">';
-          s+='<span class="song-title"><a class="say-text say" href=#'+(i++)+' data-say="'+title+'">'+title+'</a></span>';
-          s+='</div>';
-          s+='<div class="play-now">';
-          s+='<a class="btn btn-sm btn-black say" data-say="'+title+'"><span class="normal-state" >Play</span><span class="play-state">Pause</span></a>';
-          s+='</div>';
-          translations[title] = {};
-          //console.log(this.content.$t.split(", "));
-          this.content.$t.split(", ").forEach(function(el) {
-            translations[title][(el.split(": "))[0]] = (el.split(": "))[1];
-            // text = (el.split(": "))[1];
-            // s += '<td data-title="'+voices.get((el.split(": "))[0])+'"> <a href="#"><i class="say fa fa-play-circle" style="font-size:48px;color:black" lang="'+(el.split(": "))[0]+'" data-text="'+text+'" ></i><audio class= rel="noreferrer" hidden></audio></a></td>';
-          });
-    
-          $( "#translations" ).append( s );
-          // console.log(this.title.$t);
-          // console.log(this.content.$t);
-        }
+
+            var title = this.title.$t.replace(/[^ -~]+/g, "").replace(/(\r\n|\n|\r)/gm, "").trim();
+            var s = '<div class="song amplitude-song-container amplitude-play-pause amplitude-active-song-container ">';
+            s += '<div class="song-meta-data">';
+            s += '<span class="song-title"><a class="say-text say" href=#' + (i++) + ' data-say="' + title + '">' + title + '</a></span>';
+            s += '</div>';
+            s += '<div class="play-now">';
+            s += '<a class="btn btn-sm btn-black say" data-say="' + title + '"><span class="normal-state" >Play</span><span class="play-state">Pause</span></a>';
+            s += '</div>';
+            translations[title] = {};
+            //console.log(this.content.$t.split(", "));
+            this.content.$t.split(", ").forEach(function (el) {
+              translations[title][(el.split(": "))[0]] = (el.split(": "))[1];
+              // text = (el.split(": "))[1];
+              // s += '<td data-title="'+voices.get((el.split(": "))[0])+'"> <a href="#"><i class="say fa fa-play-circle" style="font-size:48px;color:black" lang="'+(el.split(": "))[0]+'" data-text="'+text+'" ></i><audio class= rel="noreferrer" hidden></audio></a></td>';
+            });
+
+            $("#translations").append(s);
+            // console.log(this.title.$t);
+            // console.log(this.content.$t);
+          }
+        });
+      }).fail(function () {
+        console.log("Loading spreadsheet failed.");
       });
-    }).fail(function(){
-      console.log("Loading spreadsheet failed.");
-    });
 
-  }
+    }
 
-  window.onload = function(e){
-    var $rows = $('#translations').find('.song');
-      $('#search').keyup(function() {
+    window.onload = function (e) {
+      var $rows = $('#translations').find('.song');
+      $('#search').keyup(function () {
         $rows = $('#translations').find('.song');
         var val = '^(?=.*\\b' + $.trim($(this).val()).split(/\s+/).join('\\b)(?=.*\\b') + ').*$',
-            reg = RegExp(val, 'i'),
-            text;
+          reg = RegExp(val, 'i'),
+          text;
 
-        $rows.show().filter(function() {
-            text = $(this).find(".song-meta-data").text().replace(/\s+/g, ' ');
-            return !reg.test(text);
+        $rows.show().filter(function () {
+          text = $(this).find(".song-meta-data").text().replace(/\s+/g, ' ');
+          return !reg.test(text);
         }).hide();
       });
-  }
-
-  function querySt(ji) {
-    hu = window.location.search.substring(1); 
-    gy = hu.split("&");
-
-    for (i=0;i<gy.length;i++) { 
-      ft = gy[i].split("="); 
-      if (ft[0] == ji) { 
-        return ft[1]; 
-      } 
-    } 
-  }
-
-	// ID of the Google Spreadsheet
- var defaultSheetID = "1gsdlh7rZmZeC2rYBS16b3g1Z5kJ1AkiZRT9_sTJgBz4"
-
- var spreadsheetID = defaultSheetID;
-
-  var query = "undefined";
-  var queries = ["sheet", "key"];
-  var i = 0;
-  queries.every(function(q){
-    query = decodeURIComponent(querySt(q));
-    if(query!="undefined"){
-      spreadsheetID = query;
-      return false;
     }
-    else{
-      return true;
+
+    function querySt(ji) {
+      hu = window.location.search.substring(1);
+      gy = hu.split("&");
+
+      for (i = 0; i < gy.length; i++) {
+        ft = gy[i].split("=");
+        if (ft[0] == ji) {
+          return ft[1];
+        }
+      }
     }
-  });
 
-  // Make sure it is public or set to Anyone with link can view 
-  var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
+    // ID of the Google Spreadsheet
+    var defaultSheetID = "1gsdlh7rZmZeC2rYBS16b3g1Z5kJ1AkiZRT9_sTJgBz4"
 
-  getSheet(url);
-  
+    var spreadsheetID = defaultSheetID;
 
-  // var voicelist = responsiveVoice.getVoices();
-  // voicelist.forEach(function(voice){
-  //   console.log('case "en": row[i] = "'+voice.name+'"; break;');
-  // })
+    var query = "undefined";
+    var queries = ["sheet", "key"];
+    var i = 0;
+    queries.every(function (q) {
+      query = decodeURIComponent(querySt(q));
+      if (query != "undefined") {
+        spreadsheetID = query;
+        return false;
+      }
+      else {
+        return true;
+      }
+    });
 
- // $(function(){
-  // $('a.say').on('click', function(e){
-  //   console.log("clicked");
-  // })
- // });
+    // Make sure it is public or set to Anyone with link can view 
+    var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
 
-  document.addEventListener('click', function (e) {
-    if (hasClass(e.target, 'say')) {
+    getSheet(url);
+
+
+    // var voicelist = responsiveVoice.getVoices();
+    // voicelist.forEach(function(voice){
+    //   console.log('case "en": row[i] = "'+voice.name+'"; break;');
+    // })
+
+    // $(function(){
+    // $('a.say').on('click', function(e){
+    //   console.log("clicked");
+    // })
+    // });
+
+    document.addEventListener('click', function (e) {
+      if (hasClass(e.target, 'say')) {
         e.preventDefault();
         var targetElement = e.target || event.srcElement;
         // $(targetElement).toggleClass("fa-play-circle-o fa-play-circle");
         var text = $(targetElement).attr("data-say");
         // console.log(Object.keys(translations).find(text));
         var translation = translations[text][currentLang];
-        responsiveVoice.speak(translation, voices.get(currentLang), {onend: function(){
-          // $(targetElement).toggleClass("fa-play-circle fa-play-circle-o");
-        }});
+        responsiveVoice.speak(translation, voices.get(currentLang), {          
+onend: function () {
+            // $(targetElement).toggleClass("fa-play-circle fa-play-circle-o");
+          }
+        });
 
         // var text = encodeURIComponent($(targetElement).text());
         // var url = "http://translate.google.com/translate_tts?tl="+lang+"&q="+text+"&client=t";
@@ -359,33 +346,33 @@
         //   }
         // });
         // $(targetElement).find("audio:first").attr('src', url).get(0).play();
-    } else if (hasClass(e.target, 'language')) {
-      e.preventDefault();
-      var targetElement = e.target || event.srcElement;
-      currentLang = $(targetElement).text();
-      console.log(currentLang);
-    }
-}, false);
+      } else if (hasClass(e.target, 'language')) {
+        e.preventDefault();
+        var targetElement = e.target || event.srcElement;
+        currentLang = $(targetElement).text();
+        console.log(currentLang);
+      }
+    }, false);
 
-  function hasClass(elem, className) {
-    return elem.className.split(' ').indexOf(className) > -1;
-}
-</script>
-    <!-- Script -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/owl.carousel.js"></script>
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/plyr.js"></script>
-    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/jquery.countdown.min.js"></script>
-    <script src="assets/js/tether.min.js"></script>
-    <script src="assets/js/jquery.slimscroll.min.js"></script>
-    <script src="assets/js/amplitude.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmiJjq5DIg_K9fv6RE72OY__p9jz0YTMI"></script>
-    <script src="js/map.js"></script>
-    <script src="js/custom.js"></script>
+    function hasClass(elem, className) {
+      return elem.className.split(' ').indexOf(className) > -1;
+    }
+  </script>
+  <!-- Script -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/owl.carousel.js"></script>
+  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="assets/js/plyr.js"></script>
+  <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+  <script src="assets/js/isotope.pkgd.min.js"></script>
+  <script src="assets/js/jquery.countdown.min.js"></script>
+  <script src="assets/js/tether.min.js"></script>
+  <script src="assets/js/jquery.slimscroll.min.js"></script>
+  <script src="assets/js/amplitude.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmiJjq5DIg_K9fv6RE72OY__p9jz0YTMI"></script>
+  <script src="js/map.js"></script>
+  <script src="js/custom.js"></script>
 
 </body>
