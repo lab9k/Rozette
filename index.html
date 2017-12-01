@@ -17,6 +17,7 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/main.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -100,7 +101,7 @@
                                     </div>
                                     <div class="col-md-8 col-sm-7 col-xs-6">
                                          <div id="searchfield" class="input-group stylish-input-group">
-                                            <input type="text" class="form-control"  placeholder="Search" >
+                                            <input id="search" type="text" class="form-control"  placeholder="Search" >
                                             <span class="input-group-addon">
                                                 <button type="submit">
                                                     <span class="fa fa-search"></span>
@@ -125,8 +126,27 @@
 
    
 
+<<<<<<< HEAD
 
 <!-- </body> -->
+=======
+    <!-- Script -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/plyr.js"></script>
+    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/jquery.countdown.min.js"></script>
+    <script src="assets/js/tether.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.min.js"></script>
+    <script src="assets/js/amplitude.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmiJjq5DIg_K9fv6RE72OY__p9jz0YTMI"></script>
+    <script src="js/map.js"></script>
+    <script src="js/custom.js"></script>
+>>>>>>> 923153984d8f2a0b1e48081a0f600925b5ab0346
 
 <!-- <body>
   <div id="addSheet">
@@ -212,12 +232,11 @@
           var title = this.title.$t.replace(/[^ -~]+/g, "").replace(/(\r\n|\n|\r)/gm,"").trim();
           var s = '<div class="song amplitude-song-container amplitude-play-pause amplitude-active-song-container ">';
           s+='<div class="song-meta-data">';
-          s+='<span class="song-title"><a class="say" href=#'+(i++)+' data-say="'+title+'">'+title+'</a></span>';
+          s+='<span class="song-title"><a class="say-text say" href=#'+(i++)+' data-say="'+title+'">'+title+'</a></span>';
           s+='</div>';
           s+='<div class="play-now">';
           s+='<a class="btn btn-sm btn-black say" data-say="'+title+'"><span class="normal-state" >Play</span><span class="play-state">Pause</span></a>';
           s+='</div>';
-          console.log(s);
           translations[title] = {};
           //console.log(this.content.$t.split(", "));
           this.content.$t.split(", ").forEach(function(el) {
@@ -238,15 +257,15 @@
   }
 
   window.onload = function(e){
-    var $rows = $('#translations').find('tr');
+    var $rows = $('#translations').find('.song');
       $('#search').keyup(function() {
-        $rows = $('#translations').find('tr');
+        $rows = $('#translations').find('.song');
         var val = '^(?=.*\\b' + $.trim($(this).val()).split(/\s+/).join('\\b)(?=.*\\b') + ').*$',
             reg = RegExp(val, 'i'),
             text;
 
         $rows.show().filter(function() {
-            text = $(this).text().replace(/\s+/g, ' ');
+            text = $(this).find(".song-meta-data").text().replace(/\s+/g, ' ');
             return !reg.test(text);
         }).hide();
       });

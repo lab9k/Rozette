@@ -1,0 +1,20 @@
+body { 
+    background: url("images/background.jpg") repeat 0 0;
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+  }
+  
+body { 
+background: url("../images/background.jpg") repeat 0 0;
+background-size:     cover;
+background-repeat:   no-repeat;
+background-position: center center;
+}
+
+body { 
+background-image: url("../images/background.jpg") repeat 0 0;
+background-size:     cover;
+background-repeat:   no-repeat;
+background-position: center center;
+}
