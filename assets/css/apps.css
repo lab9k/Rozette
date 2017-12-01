@@ -194,7 +194,7 @@ iframe {
 .controller-common {
   height: 33px;
   width: 33px;
-  background: #fc427f;
+  background: #4885ed;
   text-align: center;
   border-radius: 50%;
   line-height: 33px;
@@ -328,7 +328,7 @@ input[type=range].volume-slider-one{
   input[type='range']::-webkit-slider-runnable-track {
     height: 10px;
     -webkit-appearance: none;
-    color: #fc427f;
+    color: #4885ed;
     margin-top: -1px; }
   input[type='range']::-webkit-slider-thumb {
     width: 10px;
@@ -341,17 +341,17 @@ input[type=range].volume-slider-one{
 
 /** FF*/
 input[type="range"]::-moz-range-progress {
-  background-color: #fc427f; }
+  background-color: #4885ed; }
 
 input[type="range"]::-moz-range-track {
-  background-color: #fc427f; }
+  background-color: #4885ed; }
 
 /* IE*/
 input[type="range"]::-ms-fill-lower {
-  background-color: #fc427f; }
+  background-color: #4885ed; }
 
 input[type="range"]::-ms-fill-upper {
-  background-color: #fc427f; }
+  background-color: #4885ed; }
 
 /*--- time duration style group ---*/
 .duration-2 {
@@ -378,7 +378,7 @@ input[type="range"]::-ms-fill-upper {
   opacity: 1 !important;
   right: 0 !important;
   border-radius: 0px !important;
-  background: #fc427f !important;
+  background: #4885ed !important;
   display: none; }
 
 .player-track-list-block {
@@ -401,7 +401,7 @@ input[type="range"]::-ms-fill-upper {
   position: absolute;
   left: -30px;
   top: 0;
-  background: #fc427f; }
+  background: #4885ed; }
 
 .amplitude-song-container.amplitude-playing .song-title {
-  color: #fc427f; }
+  color: #4885ed; }
