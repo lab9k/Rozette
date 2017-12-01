@@ -352,9 +352,14 @@ document.addEventListener('mouseup', function (e) {
       $(targetElement).removeClass("amplitude-playing");
       $(targetElement).addClass("amplitude-paused");
       responsiveVoice.cancel();
+      setTimeout(function(){ playflag = 0; }, 100);
+    } else if (hasClass(e.target, 'say') || $(targetElement).parents('.say').length){
+      let playingElement = $('.amplitude-playing');
+      playingElement.removeClass("amplitude-playing");
+      playingElement.addClass("amplitude-paused");
       playflag = 0;
     }
-  } else if(mouseflag === 0 && playflag === 0 ){
+  } if(mouseflag === 0 && playflag === 0 ){
     e.preventDefault();
     let targetElement = e.target || event.srcElement;
     if (hasClass(e.target, 'say') || $(targetElement).parents('.say').length) {
