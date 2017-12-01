@@ -4,13 +4,219 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rozette</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="main.css">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/owl.carousel.css">
+  <link rel="stylesheet" href="assets/css/owl.transitions.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/apps.css">
+  <link rel="stylesheet" href="assets/css/plyr.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
 </head>
+
+<body class="page">
+
+        <!-- Track List -->
+        <div class="section tracks-section text-white">
+            <div class="overlay section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 col-xs-12">
+                            <div class="section-header text-center">
+                                <h3 class="section-title">Tracklist</h3>
+                                <p class="section-subtext">we trying hard to make your fresh mind we trying hard to make your fresh mind</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="music-wrap">
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-5 col-xs-6">
+                                        <div id="player-one" class="player-main-block">
+                                            <div class="album-art-block">
+                                                <div class="track-meta-info" id="meta-container">
+                                                    <span class="song-name" amplitude-song-info="name" amplitude-main-song-info="true"></span>
+                                                    <div class="song-artist-album">
+                                                        - <span amplitude-song-info="artist" amplitude-main-song-info="true"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="album-art-space">
+                                                    <img class="img-responsive" amplitude-song-info="cover_art_url" amplitude-main-song-info="true" alt="..." />
+                                                </div>
+                                            </div>
+                                            <div id="amplitude-left" class="audio-controller-wrap">
+                                                <div id="player-left-bottom">
+
+                                                    <div class="time-controller-block" id="time-container">
+                                                        <div class="input-range-block">
+                                                            <span class="current-time">
+												            <span class="amplitude-current-minutes" amplitude-main-current-minutes="true"></span>:<span class="amplitude-current-seconds" amplitude-main-current-seconds="true"></span>
+                                                            </span>
+                                                            <div class="track-progress-wrap">
+                                                                <input type="range" class="amplitude-song-slider full-width" min="1" max="100" step="1" amplitude-main-song-slider="true" />
+                                                                <div class="track-progress"></div>
+                                                            </div>
+                                                            <span class="duration">
+												            <span class="amplitude-duration-minutes" amplitude-main-duration-minutes="true"></span>:<span class="amplitude-duration-seconds" amplitude-main-duration-seconds="true"></span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div id="control-container" class="control-container">
+                                                        <div id="central-control-container">
+                                                            <div id="central-controls" class="audio-controller-block">
+                                                                <div class="controller-common amplitude-prev" id="previous"></div>
+                                                                <div class="controller-common amplitude-play-pause play-pause-btn" amplitude-main-play-pause="true" id="play-pause"></div>
+                                                                <div class="controller-common amplitude-next" id="next"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="player-footer">
+                                                        <div class="volume-container">
+                                                            <i class="fa fa-volume-down" aria-hidden="true"></i>
+                                                            <input type="range" class="amplitude-volume-slider volume-slider-one" />
+                                                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 col-sm-7 col-xs-6">
+                                        <div class="player-track-list-block">
+                                            <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="0" data-song="audio/01-title-staff-roll.mp3" data-cover="images/album-art/1.jpg">
+                                                <div class="song-meta-data">
+                                                    <span class="song-title">One Dance</span>
+                                                    <span class="song-artist">DRAKE FT WIZKID &amp; KYLA</span>
+                                                </div>
+                                                <div class="play-now">
+                                                    <a class="btn btn-sm btn-black"><span class="normal-state">Play Now</span><span class="play-state">Pause</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="1" data-song="audio/02-into-the-dark-night.mp3" data-cover="images/album-art/2.jpg">
+                                                <div class="song-meta-data">
+                                                    <span class="song-title">7 YEARS</span>
+                                                    <span class="song-artist">LUKAS GRAHAM</span>
+                                                </div>
+                                                <div class="play-now">
+                                                    <a class="btn btn-sm btn-black"><span class="normal-state">Play Now</span><span class="play-state">Pause</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="2" data-song="audio/03-earth.mp3" data-cover="images/album-art/3.jpg">
+                                                <div class="song-meta-data">
+                                                    <span class="song-title">CHEAP THRILLS</span>
+                                                    <span class="song-artist">SIA</span>
+                                                </div>
+                                                <div class="play-now">
+                                                    <a class="btn btn-sm btn-black"><span class="normal-state">Play Now</span><span class="play-state">Pause</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="3" data-song="audio/04-star-wars-title.mp3" data-cover="images/album-art/4.jpg">
+                                                <div class="song-meta-data">
+                                                    <span class="song-title">I TOOK A PILL IN IBIZA</span>
+                                                    <span class="song-artist">MIKE POSNER</span>
+                                                </div>
+                                                <div class="play-now">
+                                                    <a class="btn btn-sm btn-black"><span class="normal-state">Play Now</span><span class="play-state">Pause</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="4" data-song="audio/08 The Gun.mp3" data-cover="images/album-art/5.jpg">
+                                                <div class="song-meta-data">
+                                                    <span class="song-title">THIS IS WHAT YOU CAME FOR</span>
+                                                    <span class="song-artist">CALVIN HARRIS FT RIHANNA</span>
+                                                </div>
+                                                <div class="play-now">
+                                                    <a class="btn btn-sm btn-black"><span class="normal-state">Play Now</span><span class="play-state">Pause</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="5" data-song="audio/interlude.mp3" data-cover="images/album-art/6.jpg">
+                                                <div class="song-meta-data">
+                                                    <span class="song-title">LUSH LIFE</span>
+                                                    <span class="song-artist">ZARA LARSSON</span>
+                                                </div>
+                                                <div class="play-now">
+                                                    <a class="btn btn-sm btn-black"><span class="normal-state">Play Now</span><span class="play-state">Pause</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="6" data-song="audio/01-title-staff-roll.mp3" data-cover="images/album-art/7.jpg">
+                                                <div class="song-meta-data">
+                                                    <span class="song-title">CLOSER</span>
+                                                    <span class="song-artist">CHAINSMOKERS FT HALSEY</span>
+                                                </div>
+                                                <div class="play-now">
+                                                    <a class="btn btn-sm btn-black"><span class="normal-state">Play Now</span><span class="play-state">Pause</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="7" data-song="audio/02-into-the-dark-night.mp3" data-cover="images/album-art/8.jpg">
+                                                <div class="song-meta-data">
+                                                    <span class="song-title">LOVE YOURSELF</span>
+                                                    <span class="song-artist">JUSTIN BIEBER</span>
+                                                </div>
+                                                <div class="play-now">
+                                                    <a class="btn btn-sm btn-black"><span class="normal-state">Play Now</span><span class="play-state">Pause</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="8" data-song="audio/03-earth.mp3" data-cover="images/album-art/9.jpg">
+                                                <div class="song-meta-data">
+                                                    <span class="song-title">WORK</span>
+                                                    <span class="song-artist">RIHANNA FT DRAKE</span>
+                                                </div>
+                                                <div class="play-now">
+                                                    <a class="btn btn-sm btn-black"><span class="normal-state">Play Now</span><span class="play-state">Pause</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="9" data-song="audio/04-star-wars-title.mp3" data-cover="images/album-art/10.jpg">
+                                                <div class="song-meta-data">
+                                                    <span class="song-title">CAN'T STOP THE FEELING</span>
+                                                    <span class="song-artist">JUSTIN TIMBERLAKE</span>
+                                                </div>
+                                                <div class="play-now">
+                                                    <a class="btn btn-sm btn-black"><span class="normal-state">Play Now</span><span class="play-state">Pause</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Track List End -->
+
+
+    </div>
+
+   
+
+    <!-- Script -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/plyr.js"></script>
+    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/jquery.countdown.min.js"></script>
+    <script src="assets/js/tether.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.min.js"></script>
+    <script src="assets/js/amplitude.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmiJjq5DIg_K9fv6RE72OY__p9jz0YTMI"></script>
+    <script src="js/map.js"></script>
+    <script src="js/custom.js"></script>
+</body>
 
 <body>
   <div id="addSheet">
