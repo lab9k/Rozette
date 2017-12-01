@@ -63,12 +63,12 @@ h6,
 }
 
 a {
-  color: #4885ed;
+  color: #ffffff;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 a:focus, a:visited, a:active {
-  color: #4885ed;
+  color: #ffffff;
   outline: none;
   text-decoration: none;
 }
@@ -85,7 +85,7 @@ a:hover {
 }
 
 .section-padding {
-  padding: 120px 0;
+  padding: 30px 0;
 }
 .section-padding.bottom-0 {
   padding-bottom: 0;
@@ -3141,3 +3141,53 @@ border-color:#ccc;
 #searchfield {
   margin-bottom: 1em;
 }
+
+/* Tabs panel */
+.tabbable-panel {
+  padding: 10px;
+}
+
+/* Default mode */
+.tabbable-line > .nav-tabs {
+  border: none;
+  margin: 0px;
+}
+.tabbable-line > .nav-tabs > li {
+  margin-right: 2px;
+}
+.tabbable-line > .nav-tabs > li > a {
+  border: 0;
+  margin-right: 0;
+  color: #ffffff;
+}
+.tabbable-line > .nav-tabs > li > a > i {
+  color: #a6a6a6;
+}
+.tabbable-line > .nav-tabs > li.open, .tabbable-line > .nav-tabs > li:hover {
+  border-bottom: 4px solid #4885ed;
+}
+.tabbable-line > .nav-tabs > li.open > a, .tabbable-line > .nav-tabs > li:hover > a {
+  border: 0;
+  background: none !important;
+  color: #4885ed;
+}
+.tabbable-line > .nav-tabs > li.open > a > i, .tabbable-line > .nav-tabs > li:hover > a > i {
+  color: #4885ed;
+}
+
+.tabbable-line > .nav-tabs > li.active {
+    border-bottom: 4px solid #4885ed;
+    background-color:white;
+    position: relative;
+}
+.tabbable-line > .nav-tabs > li.active > a {
+  border: 0;
+  color: #000000;
+  /* background-color: #4885ed; */
+  background-color: transparent !important;
+}
+.tabbable-line > .nav-tabs > li.active > a > i {
+  color: #404040;
+}
+
+
