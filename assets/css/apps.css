@@ -371,7 +371,8 @@ input[type="range"]::-ms-fill-upper {
   line-height: 23px; }
 
 .player-track-list-block {
-  border-right: 6px solid #b7b7b7; }
+  /* border-right: 6px solid #b7b7b7;  */
+}
 
 .slimScrollBar {
   width: 6px !important;

@@ -1411,7 +1411,7 @@ Music Player
 }
 
 .player-track-list-block {
-  border-right: 10px solid #f7f7f7 !important;
+  /* border-right: 10px solid #f7f7f7 !important; */
 }
 
 .slimScrollDiv .slimScrollBar {
@@ -1435,8 +1435,8 @@ Music Player
   font-size: 1.8rem;
   font-weight: 700;
   background-color: #f7f7f7;
-  margin: 15px 0;
-  padding: 22px 30px;
+  margin: 8px 0;
+  padding: 8px 30px;
 }
 .amplitude-song-container:first-child {
   margin-top: 0;
