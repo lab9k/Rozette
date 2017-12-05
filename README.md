@@ -18,25 +18,27 @@ Klik op "bestand", vervolgens op "kopie maken..."
 Nu kan je de naam aanpassen. Klik daarna op "OK".
 Vervolgens wordt de spreadsheet aangemaakt en geopend.
 
-### Stap 2: Link de Google spreadsheet aan Rozette
+### Stap 2: Vul je Google spreadsheet in
 
-haal de GOOGLESPREADSHEEDID van deze spreadsheet uit de url, bv. :
-1gsdlh7rZmZeC2rYBS16b3g1Z5kJ1AkiZRT9_sTJgBz4
-
-### Stap 3: Vul je Google spreadsheet in
-
-Als end-user vul je in de linker kolom de tekst in in het nederlands die vertaalt moet worden:
-[Google spreadsheet](https://docs.google.com/spreadsheets/d/1gsdlh7rZmZeC2rYBS16b3g1Z5kJ1AkiZRT9_sTJgBz4/edit#gid=0)
+* Vul in de linkerkolom de te vertalen tekst in het nederlands op.
+* Voeg de [2-letterige landcodes](https://nl.wikipedia.org/wiki/ISO_3166-1) van de talen* naar waar u wenst te vertalen toe als kolomtitels. 
 
 | Translating status | en | fr | de | tr | pl |
 |----------|:-------------:|:------:| :------:|:------:|:------:|
 |UK English Female |	UK English Female |	French Female |	Deutsch Female | Turkish Female |	Polish Female |
-|te vertalen vanuit Nederlands|vertaling in Engels|vertaling in Frans|vertaling in Duits|vertaling in Turks|vertaling in Pools| 
+|te vertalen vanuit Nederlands|vertaling in Engels|vertaling in Frans|vertaling in Duits|vertaling in Turks|vertaling in Pools|
+
+*: niet alle talen worden ondersteund. Klik [hier](https://responsivevoice.org/text-to-speech-languages/) voor een overzicht.
+
+### Stap 3: Link de Google spreadsheet aan Rozette
+
+Open volgende [link](https://lab9k.github.io/Rozette/help.html).
+Scroll naar beneden tot je "stap 5" ziet staan, plak de url van je google spreadsheet 
+in het text field en klik op "Maak rozette pagina". 
 
 ### Stap 4: Translate
 
-Vervolgens zal het script de tekst in alle opgeven talen vertalen(en,fr,de,tr & pl).
-Daarna wordt de google spreadsheet vertaald in JSON formaat. bv. : en aangeboden op volgende [link](https://spreadsheets.google.com/feeds/list/1gsdlh7rZmZeC2rYBS16b3g1Z5kJ1AkiZRT9_sTJgBz4/od6/public/values?alt=json)
+Vervolgens zal het script de tekst in alle opgeven talen automatisch vertalen(bv. en,fr,de,tr & pl).
 
 ### Stap 5: Speech
 
