@@ -30,6 +30,10 @@ Vervolgens wordt de spreadsheet aangemaakt en geopend.
 
 *: niet alle talen worden ondersteund. Klik [hier](https://responsivevoice.org/text-to-speech-languages/) voor een overzicht.
 
+### Stap 3: Publiceren op internet
+
+Om de data van de spreadsheet publiek te maken klik op "bestand" en vervolgens op "publiceren op internet..."
+
 ### Stap 3: Link de Google spreadsheet aan Rozette
 
 Open volgende [link](https://lab9k.github.io/Rozette/help.html).
