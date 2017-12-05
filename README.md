@@ -23,8 +23,6 @@ Vervolgens wordt de spreadsheet aangemaakt en geopend.
 * Vul in de linkerkolom de te vertalen tekst in het nederlands op.
 * Voeg de [2-letterige landcodes](https://nl.wikipedia.org/wiki/ISO_3166-1) van de talen* naar waar u wenst te vertalen toe als kolomtitels. 
 
-https://nl.wikipedia.org/wiki/ISO_3166-1
-
 | Translating status | en | fr | de | tr | pl |
 |----------|:-------------:|:------:| :------:|:------:|:------:|
 |UK English Female |	UK English Female |	French Female |	Deutsch Female | Turkish Female |	Polish Female |
