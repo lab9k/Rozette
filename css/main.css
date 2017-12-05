@@ -29,6 +29,12 @@ body {
 }
 #addSheet a{
     font-size: 8pt;
+    background-color: #404040;
+    border-color: transparent;
+}
+#addSheet a:hover{
+    color: #ffffff;
+    background-color: #4885ed;
 }
 
 #player-one{

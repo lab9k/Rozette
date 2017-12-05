@@ -11,7 +11,7 @@ html {
 body {
   font-size: 1.4rem;
   font-family: "Montserrat", sans-serif;
-  color: #111111;
+  color: #404040;
   font-weight: 300;
   line-height: 1.85714;
   height: 100vh;
@@ -271,8 +271,8 @@ Button
   color: #4885ed;
 }
 .btn.btn-white:hover, .btn.btn-white:hover:active, .btn.btn-white:hover:focus, .btn.btn-white:hover:active:focus {
-  background-color: #f7f7f7;
-  border-color: #f7f7f7;
+  background-color: #f7f7f7e6;
+  border-color: #f7f7f7e6;
   color: #111111;
 }
 .btn.btn-white.btn-simple {
@@ -285,8 +285,8 @@ Button
   color: #ffffff;
 }
 .btn.btn-black {
-  background-color: #111111;
-  border-color: #111111;
+  background-color: #404040;
+  border-color: #404040;
   color: #ffffff;
 }
 .btn.btn-black:active, .btn.btn-black:focus, .btn.btn-black:active:focus, .btn.btn-black:visited {
@@ -1271,13 +1271,13 @@ Music Player
 ----------------------------*/
 .player-main-block {
   margin-bottom: 0;
-  background-color: #f7f7f7;
+  background-color: #f7f7f7b3;
   padding: 60px 40px;
 }
 
 .album-art-block .track-meta-info {
   position: static;
-  color: #111111;
+  color: #404040;
 }
 .album-art-block .song-name {
   font-size: 1.8rem;
@@ -1411,7 +1411,7 @@ Music Player
 }
 
 .player-track-list-block {
-  /* border-right: 10px solid #f7f7f7 !important; */
+  /* border-right: 10px solid #f7f7f7e6 !important; */
 }
 
 .slimScrollDiv .slimScrollBar {
@@ -1421,7 +1421,7 @@ Music Player
 }
 .slimScrollDiv .slimScrollRail {
   width: 10px !important;
-  background-color: #f7f7f7 !important;
+  background-color: #f7f7f7e6 !important;
 }
 
 .player-track-list-block {
@@ -1434,7 +1434,7 @@ Music Player
   list-style-position: inside;
   font-size: 1.8rem;
   font-weight: 700;
-  background-color: #f7f7f7;
+  background-color: #f7f7f7e6;
   margin: 8px 0;
   padding: 8px 30px;
 }
@@ -1518,7 +1518,7 @@ Blog
 
 .post {
   margin-bottom: 30px;
-  background-color: #f7f7f7;
+  background-color: #f7f7f7e6;
 }
 
 .post-thumb {
@@ -2491,7 +2491,7 @@ Album
   background-size: cover;
 }
 .tracks-section .overlay {
-  background-color: rgba(17, 17, 17, 0.8);
+  /* background-color: rgba(17, 17, 17, 0.8); */
 }
 
 /*** Album Review ***/
