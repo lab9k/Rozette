@@ -21,8 +21,8 @@ body {
 
 #addSheet {
     position: absolute;
-    top: 0px;
-    right: -20px; 
+    top: 25px;
+    right: 25px;
 }
 #addSheet a{
     font-size: 8pt;
