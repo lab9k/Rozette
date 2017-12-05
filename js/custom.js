@@ -51,61 +51,61 @@ $(document).ready(function () {
     }
 
     /*** Recent albul slider ***/
-    if ($('#recent-album-carousel').length > 0) {
-        $('#recent-album-carousel').owlCarousel({
-            singleItem: true,
-            slideSpeed: 200,
-            autoPlay: 5000,
-            stopOnHover: false,
-            navigation: true,
-            navigationText: ['<i class=\"fa fa-angle-left\"></i>', '<i class=\"fa fa-angle-right\"></i>'],
-            pagination: false,
-        });
-    }
+    // if ($('#recent-album-carousel').length > 0) {
+    //     $('#recent-album-carousel').owlCarousel({
+    //         singleItem: true,
+    //         slideSpeed: 200,
+    //         autoPlay: 5000,
+    //         stopOnHover: false,
+    //         navigation: true,
+    //         navigationText: ['<i class=\"fa fa-angle-left\"></i>', '<i class=\"fa fa-angle-right\"></i>'],
+    //         pagination: false,
+    //     });
+    // }
 
-    if ($('#latest-album-carousel').length > 0) {
-        $('#latest-album-carousel').owlCarousel({
-            items: 6,
-            itemsDesktop: [1199, 5],
-            itemsDesktopSmall: [991, 4],
-            itemsTablet: [767, 3],
-            itemsMobile: [479, 1],
-            slideSpeed: 200,
-            autoPlay: 3000,
-            stopOnHover: true,
-            navigation: false,
-            pagination: false,
-        });
-    }
+    // if ($('#latest-album-carousel').length > 0) {
+    //     $('#latest-album-carousel').owlCarousel({
+    //         items: 6,
+    //         itemsDesktop: [1199, 5],
+    //         itemsDesktopSmall: [991, 4],
+    //         itemsTablet: [767, 3],
+    //         itemsMobile: [479, 1],
+    //         slideSpeed: 200,
+    //         autoPlay: 3000,
+    //         stopOnHover: true,
+    //         navigation: false,
+    //         pagination: false,
+    //     });
+    // }
 
-    if ($('#album-review-carousel').length > 0) {
-        $('#album-review-carousel').owlCarousel({
-            singleItem: true,
-            slideSpeed: 200,
-            //autoPlay: 5000,
-            stopOnHover: false,
-            navigation: true,
-            navigationText: ['<i class=\"fa fa-angle-left\"></i>', '<i class=\"fa fa-angle-right\"></i>'],
-            pagination: false,
-        });
-    }
+    // if ($('#album-review-carousel').length > 0) {
+    //     $('#album-review-carousel').owlCarousel({
+    //         singleItem: true,
+    //         slideSpeed: 200,
+    //         //autoPlay: 5000,
+    //         stopOnHover: false,
+    //         navigation: true,
+    //         navigationText: ['<i class=\"fa fa-angle-left\"></i>', '<i class=\"fa fa-angle-right\"></i>'],
+    //         pagination: false,
+    //     });
+    // }
 
     /*** Artist gallery carousel ***/
-    if ($('#artist-gallery-carousel').length > 0) {
-        $('#artist-gallery-carousel').owlCarousel({
-            items: 4,
-            itemsDesktop: [1199, 4],
-            itemsDesktopSmall: [991, 3],
-            itemsTablet: [767, 2],
-            itemsMobile: [479, 1],
-            slideSpeed: 200,
-            autoPlay: 3000,
-            stopOnHover: true,
-            navigation: true,
-            navigationText: ['<i class=\"fa fa-angle-left\"></i>', "<i class=\"fa fa-angle-right\"></i>"],
-            pagination: false,
-        });
-    }
+    // if ($('#artist-gallery-carousel').length > 0) {
+    //     $('#artist-gallery-carousel').owlCarousel({
+    //         items: 4,
+    //         itemsDesktop: [1199, 4],
+    //         itemsDesktopSmall: [991, 3],
+    //         itemsTablet: [767, 2],
+    //         itemsMobile: [479, 1],
+    //         slideSpeed: 200,
+    //         autoPlay: 3000,
+    //         stopOnHover: true,
+    //         navigation: true,
+    //         navigationText: ['<i class=\"fa fa-angle-left\"></i>', "<i class=\"fa fa-angle-right\"></i>"],
+    //         pagination: false,
+    //     });
+    // }
 
 
     /*-----------------------------------------------------

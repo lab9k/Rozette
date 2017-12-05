@@ -55,7 +55,7 @@
 
                       <div class="form-group">
                         <label for="sel1">Language:</label>
-                        <select class="form-control" id="languages">
+                        <select class="form-control" id="languages" onchange="changeLang(value)">
                           <option value="0">Selecteer taal...</option>                            
                         </select>
                       </div>
@@ -338,15 +338,12 @@ document.addEventListener('mouseup', function (e) {
       }});
     }
   } 
-
-  //change language
-  if (hasClass(e.target, 'language')) {
-    e.preventDefault();
-    let targetElement = e.target || event.srcElement;
-    currentLang = $(targetElement).val();
-    console.log(currentLang);
-  }
 }, false);
+
+  function changeLang($lang) {
+    currentLang = $lang;
+    console.log(currentLang);
+   }
 
   function hasClass(elem, className) {
     return elem.className.split(' ').indexOf(className) > -1;

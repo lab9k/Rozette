@@ -2485,7 +2485,7 @@ Album
 
 /*** Track Section ***/
 .tracks-section {
-  background-image: url(../images/bg/album-tracks-bg.jpg);
+  /* background-image: url(../images/bg/album-tracks-bg.jpg); */
   background-position: center center;
   background-size: cover;
 }
