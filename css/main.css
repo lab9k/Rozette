@@ -41,7 +41,19 @@ body {
     z-index: 1;
 }
 
+#content-wrapper{
+    min-height: 100%;
+    position:relative;
+}
+
 #footer{
     z-index: 2;
-    position: relative; 
+    position: absolute;
+    /* height: 100px; */
+    bottom: 0px;
+    width: 100%; 
+}
+
+#body{
+    padding-bottom: 230px;
 }

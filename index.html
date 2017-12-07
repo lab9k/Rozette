@@ -40,56 +40,59 @@
 </head>
 
 <body class="page">
-
-  <!-- Track List -->
-  <div class="section tracks-section">
-    <div class="overlay section-padding">
-      <div class="container">
-        <div id="addSheet">
-          <a href="help.html" class="btn btn-border btn-white"> Pas aan voor uw organisatie </a>
-        </div>
-
-        <div class="row">
-          <div class="col-md-8 col-md-offset-2 col-xs-12">
-            <div class="section-header text-center">
-              <h3 class="section-title">Rozette</h3>
-              <p class="section-subtext">Translate to speech</p>
+  <div id="content-wrapper">
+    <div id="body">
+      <!-- Track List -->
+      <div class="section tracks-section">
+        <div class="overlay section-padding">
+          <div class="container">
+            <div id="addSheet">
+              <a href="help.html" class="btn btn-border btn-white"> Pas aan voor uw organisatie </a>
             </div>
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="music-wrap">
-              <div class="row">
-                <div class="col-md-4 col-sm-5 col-xs-6">
-                  <div id="player-one" class="player-main-block affix">
-                    <div class="album-art-block">
-                      <div class="track-meta-info" id="meta-container">
-                        <span class="song-name" amplitude-song-info="name" amplitude-main-song-info="true">Vertaling</span>
-                      </div>
-                      <div class="form-group">
-                        <label for="sel1">Language:</label>
-                        <select class="form-control" id="languages" onchange="changeLang(value)">
-                          <option value="0">Selecteer taal...</option>
-                        </select>
-                      </div>
-                      <div class="album-art-space">
-                        <textarea id="text-say" rows="6" placeholder="Click op een term/zin" readonly></textarea>
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2 col-xs-12">
+                <div class="section-header text-center">
+                  <h3 class="section-title">Rozette</h3>
+                  <p class="section-subtext">Translate to speech</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="music-wrap">
+                  <div class="row">
+                    <div class="col-md-4 col-sm-5 col-xs-6">
+                      <div id="player-one" class="player-main-block affix">
+                        <div class="album-art-block">
+                          <div class="track-meta-info" id="meta-container">
+                            <span class="song-name" amplitude-song-info="name" amplitude-main-song-info="true">Vertaling</span>
+                          </div>
+                          <div class="form-group">
+                            <label for="sel1">Language:</label>
+                            <select class="form-control" id="languages" onchange="changeLang(value)">
+                              <option value="0">Selecteer taal...</option>
+                            </select>
+                          </div>
+                          <div class="album-art-space">
+                            <textarea id="text-say" rows="6" placeholder="Click op een term/zin" readonly></textarea>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div class="col-md-8 col-sm-7 col-xs-6">
-                  <div id="searchfield" class="input-group stylish-input-group">
-                    <input id="search" type="text" class="form-control" placeholder="Search">
-                    <span class="input-group-addon">
-                      <button type="submit">
-                        <span class="fa fa-search"></span>
-                      </button>
-                    </span>
-                  </div>
-                  <div id="translations" class="player-track-list-block table-responsive-vertical">
+                    <div class="col-md-8 col-sm-7 col-xs-6">
+                      <div id="searchfield" class="input-group stylish-input-group">
+                        <input id="search" type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-addon">
+                          <button type="submit">
+                            <span class="fa fa-search"></span>
+                          </button>
+                        </span>
+                      </div>
+                      <div id="translations" class="player-track-list-block table-responsive-vertical">
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -97,36 +100,37 @@
           </div>
         </div>
       </div>
+      <!-- Track List End -->
     </div>
-  </div>
-  <!-- Track List End -->
 
-<footer style="display: block;">
-  <div id="footer">
-      <!-- Main -->
-      <div class="container">
-        <div class="row">
-          <div class="col-md-5 col-sm-6">
-            <h4>About</h4>
-            <p>Dit project voorziet een functionaliteit van translate to speech.</p>
-          </div>
-    
-          <div class="col-md-4  col-sm-6">
-            <h4>Helpful Links</h4>
-            <ul class="footer-links">
-              <li><a href="https://github.com/lab9k/Rozette">Github</a></li>
-              <li><a href="./help.html">Help</a></li>
-            </ul>
-          </div>		
-    
-          <div class="col-md-3  col-sm-12">
-            <h4>Made by</h4>
-            <div class="text-widget">
-                <a href="https://lab9k.github.io/" target="_blank"><img id="logolab9k" src="./images/logo_lab9k.svg"></a>
-                <a href="https://digipolis.be" target="_blank"><img id="logodigipolis" src="./images/digipolis_white.png"></a>
+    <footer>
+      <div id="footer">
+        <!-- Main -->
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5 col-sm-6">
+              <h4>About</h4>
+              <p>Dit project voorziet een functionaliteit van translate to speech.</p>
             </div>
-          </div>    
-        </div>     
-      </div>   
-    </div>
-  </footer>
+      
+            <div class="col-md-4  col-sm-6">
+              <h4>Helpful Links</h4>
+              <ul class="footer-links">
+                <li><a href="https://github.com/lab9k/Rozette">Github</a></li>
+                <li><a href="./help.html">Help</a></li>
+              </ul>
+            </div>		
+      
+            <div class="col-md-3  col-sm-12">
+              <h4>Made by</h4>
+              <div class="text-widget">
+                  <a href="https://lab9k.github.io/" target="_blank"><img id="logolab9k" src="./images/logo_lab9k.svg"></a>
+                  <a href="https://digipolis.be" target="_blank"><img id="logodigipolis" src="./images/digipolis_white.png"></a>
+              </div>
+            </div>    
+          </div>     
+        </div>   
+      </div>
+    </footer>
+  </div>
+</body>
