@@ -56,6 +56,7 @@ function getSheet(url) {
 }
 
 window.onload = function (e) {
+    $('#body').css('paddingBottom', ($('#footer').height()+50)+'px');
     var $rows = $('#translations').find('.song');
     $('#search').keyup(function () {
         $rows = $('#translations').find('.song');
