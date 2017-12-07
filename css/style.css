@@ -1271,7 +1271,7 @@ Music Player
 ----------------------------*/
 .player-main-block {
   margin-bottom: 0;
-  background-color: #f7f7f7b3;
+  background-color: rgba(247, 247, 247, 0.755);
   padding: 60px 40px;
 }
 
@@ -1434,7 +1434,7 @@ Music Player
   list-style-position: inside;
   font-size: 1.8rem;
   font-weight: 700;
-  background-color: #f7f7f7e6;
+  background-color: rgba(247, 247, 247, 0.884);
   margin: 8px 0;
   padding: 8px 30px;
 }
