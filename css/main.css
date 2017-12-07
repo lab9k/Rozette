@@ -57,3 +57,19 @@ body {
 #body{
     padding-bottom: 230px;
 }
+
+#mobile-search{
+    visibility: hidden;
+    clear: both;
+  }
+
+@media screen and (max-width: 600px) {
+    #player-one{
+      visibility: hidden;
+      clear: both;
+    }
+    #mobile-search{
+        visibility: visible;
+        clear: both;
+      }
+  }
