@@ -77,4 +77,26 @@ body {
         visibility: visible;
         clear: both;
       }
+    #addSheet{
+        right:0px;
+        width:100%;
+        
+            /* Firefox */
+            display:-moz-box;
+            -moz-box-pack:center;
+            -moz-box-align:center;
+        
+            /* Safari and Chrome */
+            display:-webkit-box;
+            -webkit-box-pack:center;
+            -webkit-box-align:center;
+        
+            /* W3C */
+            display:box;
+            box-pack:center;
+            box-align:center;
+    }
+    #addSheet a{
+        text-align: center;
+    }
   }
