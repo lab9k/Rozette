@@ -13,16 +13,9 @@ function getSheet(url) {
         $(entry).each(function (index, element) {
             if (voices.size == 0) {
                 //console.log(this.content.$t.split(", "));
-
                 this.content.$t.split(", ").forEach(function (el) {
                     voices.set((el.split(": "))[0], (el.split(": "))[1]);
-                    $("#languages").append("<option class='language' value=" + (el.split(": "))[0] + ">" + (el.split(": "))[0] + "</option>");
-
-                    //            $("#languages").append("<li><a href='' onclick='return false;'>"+(el.split(": "))[0])+"</a></li>";
-
-
-                    // $( ".translationshead" ).append( "<th>"+(el.split(": "))[1]+"</th>");
-                    //console.log((el.split(": "))[1]);
+                    $(".languages").append("<option class='language' value=" + (el.split(": "))[0] + ">" + voices.get((el.split(": "))[0]) + "</option>");
                 });
             }
             else {
